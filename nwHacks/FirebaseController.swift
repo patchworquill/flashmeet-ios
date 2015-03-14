@@ -9,6 +9,10 @@
 import Foundation
 
 var rootRef = Firebase(url:"https://nwhacks.firebaseio.com/")
+var destRef = Firebase(url:"https://nwhacks.firebaseio.com/destinations")
+var racesRef = Firebase(url:"https://nwhacks.firebaseio.com/races")
+var usersRef = Firebase(url:"https://nwhacks.firebaseio.com/users")
+
 
 
 

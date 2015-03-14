@@ -95,6 +95,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         mapView.setUserTrackingMode(.Follow, animated: true)
 
+        DataController.sharedController.pushLocation(userLocation.location.coordinate)
+        
         let camera = MKMapCamera()
         camera.centerCoordinate = userLocation.location.coordinate
         camera.heading = 0

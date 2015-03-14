@@ -19,6 +19,11 @@ struct Racer: Equatable, Hashable {
     }
 }
 
+struct UserLocation {
+    var userID: String
+    var location: CLLocationCoordinate2D
+}
+
 struct RacerLocation {
     var racer: Racer
     var location: CLLocationCoordinate2D
@@ -47,9 +52,18 @@ class DataController {
     class var sharedController: DataController {
         return sharedInstance
     }
+    
+    var userID = "abcd"
 
     func pushLocation(location: CLLocationCoordinate2D) {
-        // TODO
+        let locationDict = [
+            "userID": userID,
+            "lat": location.latitude,
+            "long": location.longitude
+        ]
+        
+        usersRef.childByAppendingPath("alanisawesome").setValue(locationDict)
+        
     }
 
     func fetchRacers(completion: ([RacerLocation]) -> ()) {
