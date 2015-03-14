@@ -60,7 +60,8 @@
 		A540822B1AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
 		A540822C1AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
 		A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircularButton.swift; sourceTree = "<group>"; };
-		F07D51AA1A76491D9D248ABE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F96DA22CEDB24EB2B1D7BF7E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,8 +98,8 @@
 				0DC516181AB41A9300441A4C /* nwHacks */,
 				0DC5162E1AB41A9300441A4C /* nwHacksTests */,
 				0DC516171AB41A9300441A4C /* Products */,
-				F07D51AA1A76491D9D248ABE /* Pods.xcconfig */,
 				015C6B6EDACC47F48EE48355 /* Frameworks */,
+				FBB8C03001A9EADABBE0D620 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +186,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		FBB8C03001A9EADABBE0D620 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */,
+				B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,7 +246,7 @@
 				TargetAttributes = {
 					0DC516151AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 7NE79LP6VD;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					0DC5162A1AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
@@ -305,7 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D21A55116AAD462DB54F924B /* Check Pods Manifest.lock */ = {
@@ -459,7 +469,7 @@
 		};
 		0DC516361AB41A9300441A4C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F07D51AA1A76491D9D248ABE /* Pods.xcconfig */;
+			baseConfigurationReference = DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -472,7 +482,7 @@
 		};
 		0DC516371AB41A9300441A4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F07D51AA1A76491D9D248ABE /* Pods.xcconfig */;
+			baseConfigurationReference = B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -2,3 +2,4 @@
 platform :ios, "8.0"
 
 pod 'UAProgressView'
+pod 'Firebase', '>= 2.2.0'

@@ -1,10 +1,13 @@
 PODS:
+  - Firebase (2.2.0)
   - UAProgressView (0.1.1)
 
 DEPENDENCIES:
+  - Firebase (>= 2.2.0)
   - UAProgressView
 
 SPEC CHECKSUMS:
+  Firebase: e7a2ea2ffeff99f9c37028b354194dcc9718d36b
   UAProgressView: c393bc53d1cabc077279e957c5898a5bb7bdb3ce
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.36.0
