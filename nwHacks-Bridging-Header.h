@@ -7,3 +7,5 @@
 //
 
 #import <UAProgressView/UAProgressView.h>
+#import <Firebase/Firebase.h>
+

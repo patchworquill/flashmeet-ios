@@ -8,4 +8,7 @@
 
 import Foundation
 
+var rootRef = Firebase(url:"https://nwhacks.firebaseio.com/")
+
+
 
