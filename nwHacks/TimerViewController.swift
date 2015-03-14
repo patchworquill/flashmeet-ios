@@ -13,7 +13,7 @@ class TimerViewController: UIViewController {
     @IBOutlet var progressView: UAProgressView!
     @IBOutlet var timeLabel: UILabel!
 
-    var fireDate = NSDate(timeIntervalSinceNow: 15)
+    var fireDate = NSDate(timeIntervalSinceNow: 5)
     let startDate = NSDate()
 
     var displayLink: CADisplayLink!

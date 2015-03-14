@@ -9,10 +9,37 @@
 import Foundation
 import CoreLocation
 
-struct Racer {
-    var location: CLLocationCoordinate2D
+struct Racer: Equatable, Hashable {
+    var userID: String
     var name: String
     var profilePhoto: UIImage?
+
+    var hashValue: Int {
+        return userID.hashValue
+    }
+}
+
+struct RacerLocation {
+    var racer: Racer
+    var location: CLLocationCoordinate2D
+}
+
+struct RacerPath {
+    var currentLocation: RacerLocation
+    var locationHistory: [CLLocationCoordinate2D]
+
+    init(currentLocation: RacerLocation, locationHistory: [CLLocationCoordinate2D]) {
+        self.currentLocation = currentLocation
+        self.locationHistory = locationHistory
+    }
+    init(path: RacerPath, newLocation: RacerLocation) {
+        self.currentLocation = newLocation
+        self.locationHistory = path.locationHistory + [newLocation.location]
+    }
+}
+
+func ==(lhs: Racer, rhs: Racer) -> Bool {
+    return (lhs.userID == rhs.userID)
 }
 
 private let sharedInstance = DataController()
@@ -25,7 +52,7 @@ class DataController {
         // TODO
     }
 
-    func fetchRacers(completion: ([Racer]) -> ()) {
+    func fetchRacers(completion: ([RacerLocation]) -> ()) {
         // TODO
         async {
             completion(self.sampleRacerData)
@@ -33,13 +60,16 @@ class DataController {
     }
 
     private let startDate = NSDate()
-    private var sampleRacerData: [Racer] {
-        let vancouver = CLLocationCoordinate2D(latitude: 49.2827, longitude: 123.1207)
-        let offset = -startDate.timeIntervalSinceNow / 1000
+    private var sampleRacerData: [RacerLocation] {
+        let ubc = CLLocationCoordinate2D(latitude: 49.266432, longitude: -123.245487)
+        let offset = -startDate.timeIntervalSinceNow / 10000
         return [
-            Racer(location: vancouver.shiftBy(offset, offset),
-                    name: "John Smith",
-                    profilePhoto: nil)
+            RacerLocation(
+                racer: Racer(userID: "abcd",
+                                name: "John Smith",
+                        profilePhoto: nil),
+                location: ubc.shiftBy(offset, offset)
+            )
         ]
     }
 }

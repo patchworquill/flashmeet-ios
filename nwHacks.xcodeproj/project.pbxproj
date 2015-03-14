@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D6C20C01AB4E941002D949B /* UBC.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UBC.gpx; sourceTree = "<group>"; };
 		0DA32C171AB4CB230089E662 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0DA32C181AB4CB230089E662 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0DB360501AB4604E001BD5B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 		0DC516191AB41A9300441A4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D6C20C01AB4E941002D949B /* UBC.gpx */,
 				0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */,
 				A54082241AB4BDCE0037864C /* Fonts */,
 				0DC5161A1AB41A9300441A4C /* Info.plist */,
