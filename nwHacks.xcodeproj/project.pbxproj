@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0DB360501AB4604E001BD5B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nwHacks-Bridging-Header.h"; sourceTree = "<group>"; };
+		0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nwHacks-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		0DB95E9F1AB439CE00074827 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0DC516161AB41A9300441A4C /* nwHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nwHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC5161A1AB41A9300441A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,8 +94,6 @@
 		0DC5160D1AB41A9300441A4C = {
 			isa = PBXGroup;
 			children = (
-				A54082241AB4BDCE0037864C /* Fonts */,
-				0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */,
 				0DC516181AB41A9300441A4C /* nwHacks */,
 				0DC5162E1AB41A9300441A4C /* nwHacksTests */,
 				0DC516171AB41A9300441A4C /* Products */,
@@ -130,6 +128,8 @@
 		0DC516191AB41A9300441A4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */,
+				A54082241AB4BDCE0037864C /* Fonts */,
 				0DC5161A1AB41A9300441A4C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -164,8 +164,7 @@
 				A540822B1AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf */,
 				A540822C1AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf */,
 			);
-			name = Fonts;
-			path = nwHacks/Fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		A5600D2E1AB4549400DC5E78 /* View */ = {
