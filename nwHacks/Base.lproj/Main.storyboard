@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iid-AS-yvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-573" y="372"/>
+            <point key="canvasLocation" x="-575" y="387"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -63,8 +63,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9V-j3-SRq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g9V-j3-SRq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BzZ-XY-G68"/>
+                            <constraint firstItem="g9V-j3-SRq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="I1y-wi-2Er"/>
+                            <constraint firstItem="g9V-j3-SRq" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="KCu-gi-QD9"/>
+                            <constraint firstAttribute="trailing" secondItem="g9V-j3-SRq" secondAttribute="trailing" id="X1f-hq-54Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="g9V-j3-SRq" id="XOl-Yc-Qkg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

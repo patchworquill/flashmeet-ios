@@ -11,19 +11,15 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-    var mapView: MKMapView!
+    @IBOutlet var mapView: MKMapView!
+
     lazy var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        mapView = MKMapView(frame: view.frame)
-        mapView.rotateEnabled = true
         mapView.pitchEnabled = false
-        mapView.showsPointsOfInterest = false
         mapView.delegate = self
-        view.addSubview(mapView)
     }
 
     override func viewDidAppear(animated: Bool) {
