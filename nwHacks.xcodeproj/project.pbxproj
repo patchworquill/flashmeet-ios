@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB95EA01AB439CE00074827 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB95E9F1AB439CE00074827 /* StartViewController.swift */; };
 		0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5161B1AB41A9300441A4C /* AppDelegate.swift */; };
 		0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5161D1AB41A9300441A4C /* MapViewController.swift */; };
 		0DC516211AB41A9300441A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC5161F1AB41A9300441A4C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DB95E9F1AB439CE00074827 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0DC516161AB41A9300441A4C /* nwHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nwHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC5161A1AB41A9300441A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DC5161B1AB41A9300441A4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
 				0DC5161D1AB41A9300441A4C /* MapViewController.swift */,
 				0DC5161F1AB41A9300441A4C /* Main.storyboard */,
+				0DB95E9F1AB439CE00074827 /* StartViewController.swift */,
 				0DC516221AB41A9300441A4C /* Images.xcassets */,
 				0DC516241AB41A9300441A4C /* LaunchScreen.xib */,
 				0DC516191AB41A9300441A4C /* Supporting Files */,
@@ -215,6 +218,7 @@
 			files = (
 				0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */,
 				0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */,
+				0DB95EA01AB439CE00074827 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
