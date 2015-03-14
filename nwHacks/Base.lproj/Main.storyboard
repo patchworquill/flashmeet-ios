@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
@@ -16,35 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSc-yP-gUR">
-                                <rect key="frame" x="251" y="274" width="99" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Start">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSc-yP-gUR" customClass="CustomCircularButton" customModule="nwHacks" customModuleProvider="target">
+                                <rect key="frame" x="219" y="217" width="163.5" height="163.5"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.71764705880000002" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="163.5" id="PhL-YR-7mq"/>
+                                    <constraint firstAttribute="width" constant="163.5" id="PxZ-Vs-fQS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.18823529411764706" green="0.46274509803921571" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raceist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JW-mk-ASb">
-                                <rect key="frame" x="211" y="28" width="179" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="179" id="W0e-61-Brw"/>
-                                    <constraint firstAttribute="height" constant="65" id="c5V-Zm-0FC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="52"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0JW-mk-ASb" firstAttribute="centerX" secondItem="JSc-yP-gUR" secondAttribute="centerX" id="1Iw-vX-Fv0"/>
-                            <constraint firstItem="0JW-mk-ASb" firstAttribute="top" secondItem="n2t-yP-KtY" secondAttribute="bottom" constant="8" symbolic="YES" id="3yg-OZ-Yae"/>
                             <constraint firstAttribute="centerY" secondItem="JSc-yP-gUR" secondAttribute="centerY" id="gDa-xK-suk"/>
                             <constraint firstAttribute="centerX" secondItem="JSc-yP-gUR" secondAttribute="centerX" id="nzJ-h0-vvk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="startButton" destination="JSc-yP-gUR" id="Xug-JJ-os0"/>
-                        <outlet property="titleLabel" destination="0JW-mk-ASb" id="Ydi-Jq-CVR"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showMapView" id="Jnh-P2-Sau"/>
                     </connections>
                 </viewController>

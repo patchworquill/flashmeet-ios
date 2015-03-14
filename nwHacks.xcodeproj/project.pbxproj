@@ -14,6 +14,7 @@
 		0DC516231AB41A9300441A4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC516221AB41A9300441A4C /* Images.xcassets */; };
 		0DC516261AB41A9300441A4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC516241AB41A9300441A4C /* LaunchScreen.xib */; };
 		0DC516321AB41A9300441A4C /* nwHacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC516311AB41A9300441A4C /* nwHacksTests.swift */; };
+		A5600D2D1AB44FC700DC5E78 /* CustomCircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0DC5162B1AB41A9300441A4C /* nwHacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nwHacksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC516301AB41A9300441A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DC516311AB41A9300441A4C /* nwHacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwHacksTests.swift; sourceTree = "<group>"; };
+		A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircularButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
-				0DC5161D1AB41A9300441A4C /* MapViewController.swift */,
+				A5600D2E1AB4549400DC5E78 /* View */,
+				A5600D2F1AB4549900DC5E78 /* Controller */,
 				0DC5161F1AB41A9300441A4C /* Main.storyboard */,
-				0DB95E9F1AB439CE00074827 /* StartViewController.swift */,
 				0DC516221AB41A9300441A4C /* Images.xcassets */,
 				0DC516241AB41A9300441A4C /* LaunchScreen.xib */,
 				0DC516191AB41A9300441A4C /* Supporting Files */,
@@ -113,6 +115,23 @@
 				0DC516301AB41A9300441A4C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5600D2E1AB4549400DC5E78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A5600D2F1AB4549900DC5E78 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DC5161D1AB41A9300441A4C /* MapViewController.swift */,
+				0DB95E9F1AB439CE00074827 /* StartViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +183,11 @@
 				TargetAttributes = {
 					0DC516151AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 92N82VX6QZ;
+						DevelopmentTeam = 7NE79LP6VD;
 					};
 					0DC5162A1AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 7NE79LP6VD;
 						TestTargetID = 0DC516151AB41A9300441A4C;
 					};
 				};
@@ -217,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */,
+				A5600D2D1AB44FC700DC5E78 /* CustomCircularButton.swift in Sources */,
 				0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */,
 				0DB95EA01AB439CE00074827 /* StartViewController.swift in Sources */,
 			);
@@ -345,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = nwHacks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = nwHacks;
@@ -355,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = nwHacks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = nwHacks;
