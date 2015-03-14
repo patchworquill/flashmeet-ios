@@ -12,14 +12,18 @@ import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet var mapView: MKMapView!
-
     lazy var locationManager = CLLocationManager()
+
+    var updateTimer: NSTimer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         mapView.pitchEnabled = false
         mapView.delegate = self
+
+        updateTimer = NSTimer(timeInterval: 15, target: self, selector: "updateRacerData", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(updateTimer, forMode: NSDefaultRunLoopMode)
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -33,6 +37,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     func showUserLocation() {
         mapView.showsUserLocation = true
+    }
+
+    dynamic func updateRacerData() {
+        DataController.sharedController.fetchRacers { racers in
+            // TODO: Display racers on the map
+        }
     }
 
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {

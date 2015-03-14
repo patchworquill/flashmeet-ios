@@ -48,6 +48,7 @@ class TimerViewController: UIViewController {
         let timePastExpired = fireDate.timeIntervalSinceNow < -2
         if timePastExpired {
             performSegueWithIdentifier("showMapView", sender: self)
+            displayLink.paused = true
         }
     }
 

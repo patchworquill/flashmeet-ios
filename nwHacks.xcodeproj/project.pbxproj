@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA32C191AB4CB230089E662 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA32C171AB4CB230089E662 /* Model.swift */; };
+		0DA32C1A1AB4CB230089E662 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA32C181AB4CB230089E662 /* Utilities.swift */; };
 		0DB360511AB4604E001BD5B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB360501AB4604E001BD5B6 /* TimerViewController.swift */; };
 		0DB95EA01AB439CE00074827 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB95E9F1AB439CE00074827 /* StartViewController.swift */; };
 		0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5161B1AB41A9300441A4C /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DA32C171AB4CB230089E662 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0DA32C181AB4CB230089E662 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0DB360501AB4604E001BD5B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nwHacks-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		0DB95E9F1AB439CE00074827 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0DA32C161AB4CB0A0089E662 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DA32C181AB4CB230089E662 /* Utilities.swift */,
+				0DA32C171AB4CB230089E662 /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0DC5160D1AB41A9300441A4C = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +128,7 @@
 		0DC516181AB41A9300441A4C /* nwHacks */ = {
 			isa = PBXGroup;
 			children = (
+				0DA32C161AB4CB0A0089E662 /* Model */,
 				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
 				A5600D2E1AB4549400DC5E78 /* View */,
 				A5600D2F1AB4549900DC5E78 /* Controller */,
@@ -342,7 +356,9 @@
 			files = (
 				0DB360511AB4604E001BD5B6 /* TimerViewController.swift in Sources */,
 				0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */,
+				0DA32C1A1AB4CB230089E662 /* Utilities.swift in Sources */,
 				A5600D2D1AB44FC700DC5E78 /* CustomCircularButton.swift in Sources */,
+				0DA32C191AB4CB230089E662 /* Model.swift in Sources */,
 				0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */,
 				0DB95EA01AB439CE00074827 /* StartViewController.swift in Sources */,
 			);
