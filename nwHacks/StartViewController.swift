@@ -21,6 +21,6 @@ class StartViewController: UIViewController {
     }
 
     dynamic func startButtonPressed(sender: UIButton) {
-        performSegueWithIdentifier("showMapView", sender: self)
+        performSegueWithIdentifier("showTimer", sender: self)
     }
 }

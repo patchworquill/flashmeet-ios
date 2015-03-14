@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Start View Controller-->
         <scene sceneID="fiR-RM-MQ4">
@@ -38,12 +43,12 @@
                     </view>
                     <connections>
                         <outlet property="startButton" destination="JSc-yP-gUR" id="Xug-JJ-os0"/>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showMapView" id="Jnh-P2-Sau"/>
+                        <segue destination="Bbc-fF-fs4" kind="showDetail" identifier="showTimer" id="zWg-gs-ude"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iid-AS-yvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-575" y="387"/>
+            <point key="canvasLocation" x="-921" y="383"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -88,27 +93,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGi-yN-yVJ" customClass="UACircularProgressView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGi-yN-yVJ" customClass="UAProgressView">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-gN-VsF">
-                                        <rect key="frame" x="50" y="118" width="201" height="63"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="42"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-gN-VsF">
+                                        <rect key="frame" x="51" y="118" width="198" height="63"/>
+                                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="52"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1vt-aU-ZA1"/>
+                                    <constraint firstAttribute="height" constant="300" id="n4T-dx-3cO"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mGi-yN-yVJ" firstAttribute="centerX" secondItem="RUX-rs-BjR" secondAttribute="centerX" id="3Zh-e1-0ui"/>
+                            <constraint firstItem="mGi-yN-yVJ" firstAttribute="centerY" secondItem="RUX-rs-BjR" secondAttribute="centerY" id="W2L-Ul-jDn"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="timeLabel" destination="OIh-gN-VsF" id="wfZ-Z9-Djb"/>
+                        <outlet property="progressView" destination="mGi-yN-yVJ" id="hXA-pe-yPk"/>
+                        <outlet property="timeLabel" destination="OIh-gN-VsF" id="tJp-l7-I6n"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" id="LE6-lk-dRY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkD-Sw-gdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="1244"/>
+            <point key="canvasLocation" x="-227" y="-371"/>
         </scene>
     </scenes>
 </document>

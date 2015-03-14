@@ -7,20 +7,27 @@
 //
 
 import UIKit
-
-private let formatter: NSDateFormatter = {
-    let formatter = NSDateFormatter()
-    return formatter
-}()
+import QuartzCore
 
 class TimerViewController: UIViewController {
+    @IBOutlet var progressView: UAProgressView!
     @IBOutlet var timeLabel: UILabel!
-    var fireDate = NSDate(timeIntervalSinceNow: 15)
+
+    var fireDate = NSDate(timeIntervalSinceNow: 90)
+    let startDate = NSDate()
+
+    var displayLink: CADisplayLink!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        progressView.centralView = timeLabel
+        progressView.tintColor = UIColor.redColor()
+        progressView.borderWidth = 2
+        progressView.lineWidth = 10
+
+        displayLink = CADisplayLink(target: self, selector: "updateTime")
+        displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,9 +35,15 @@ class TimerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func updateTime() {
-        let timeRemaining = fireDate.timeIntervalSinceNow
-//        timeLabel.text =
+    dynamic func updateTime() {
+        let timeRemaining = max(fireDate.timeIntervalSinceNow, 0)
+        let mins = Int(timeRemaining / 60) % 60
+        let secs = Int(timeRemaining) % 60
+        let msecs = Int(timeRemaining * 100) % 100
+        timeLabel.text = NSString(format: "%02d:%02d.%02d", mins, secs, msecs) as String
+
+        let progress = -startDate.timeIntervalSinceNow / fireDate.timeIntervalSinceDate(startDate)
+        progressView.progress = Float(progress)
     }
 
     /*
