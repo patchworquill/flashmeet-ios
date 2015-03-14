@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5161B1AB41A9300441A4C /* AppDelegate.swift */; };
-		0DC5161E1AB41A9300441A4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5161D1AB41A9300441A4C /* ViewController.swift */; };
+		0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC5161D1AB41A9300441A4C /* MapViewController.swift */; };
 		0DC516211AB41A9300441A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC5161F1AB41A9300441A4C /* Main.storyboard */; };
 		0DC516231AB41A9300441A4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC516221AB41A9300441A4C /* Images.xcassets */; };
 		0DC516261AB41A9300441A4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC516241AB41A9300441A4C /* LaunchScreen.xib */; };
-		0DC516321AB41A9300441A4C /* MapKitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC516311AB41A9300441A4C /* MapKitTestTests.swift */; };
+		0DC516321AB41A9300441A4C /* nwHacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC516311AB41A9300441A4C /* nwHacksTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		0DC516161AB41A9300441A4C /* nwHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nwHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC5161A1AB41A9300441A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DC5161B1AB41A9300441A4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DC5161D1AB41A9300441A4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DC5161D1AB41A9300441A4C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0DC516201AB41A9300441A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DC516221AB41A9300441A4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0DC516251AB41A9300441A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0DC5162B1AB41A9300441A4C /* nwHacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nwHacksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC516301AB41A9300441A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DC516311AB41A9300441A4C /* MapKitTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitTestTests.swift; sourceTree = "<group>"; };
+		0DC516311AB41A9300441A4C /* nwHacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwHacksTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
-				0DC5161D1AB41A9300441A4C /* ViewController.swift */,
+				0DC5161D1AB41A9300441A4C /* MapViewController.swift */,
 				0DC5161F1AB41A9300441A4C /* Main.storyboard */,
 				0DC516221AB41A9300441A4C /* Images.xcassets */,
 				0DC516241AB41A9300441A4C /* LaunchScreen.xib */,
@@ -98,7 +98,7 @@
 		0DC5162E1AB41A9300441A4C /* nwHacksTests */ = {
 			isa = PBXGroup;
 			children = (
-				0DC516311AB41A9300441A4C /* MapKitTestTests.swift */,
+				0DC516311AB41A9300441A4C /* nwHacksTests.swift */,
 				0DC5162F1AB41A9300441A4C /* Supporting Files */,
 			);
 			path = nwHacksTests;
@@ -213,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DC5161E1AB41A9300441A4C /* ViewController.swift in Sources */,
+				0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */,
 				0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DC516321AB41A9300441A4C /* MapKitTestTests.swift in Sources */,
+				0DC516321AB41A9300441A4C /* nwHacksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +369,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MapKitTestTests/Info.plist;
+				INFOPLIST_FILE = nwHacksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = nwHacksTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapKitTest.app/MapKitTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nwHacks.app/nwHacks";
 			};
 			name = Debug;
 		};
@@ -384,10 +384,10 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MapKitTestTests/Info.plist;
+				INFOPLIST_FILE = nwHacksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = nwHacksTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapKitTest.app/MapKitTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nwHacks.app/nwHacks";
 			};
 			name = Release;
 		};
