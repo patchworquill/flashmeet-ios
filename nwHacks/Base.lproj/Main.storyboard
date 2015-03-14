@@ -118,7 +118,7 @@
                     <connections>
                         <outlet property="progressView" destination="mGi-yN-yVJ" id="hXA-pe-yPk"/>
                         <outlet property="timeLabel" destination="OIh-gN-VsF" id="tJp-l7-I6n"/>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" id="LE6-lk-dRY"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showMapView" id="LE6-lk-dRY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkD-Sw-gdi" userLabel="First Responder" sceneMemberID="firstResponder"/>

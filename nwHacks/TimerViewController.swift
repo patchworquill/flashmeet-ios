@@ -13,7 +13,7 @@ class TimerViewController: UIViewController {
     @IBOutlet var progressView: UAProgressView!
     @IBOutlet var timeLabel: UILabel!
 
-    var fireDate = NSDate(timeIntervalSinceNow: 90)
+    var fireDate = NSDate(timeIntervalSinceNow: 15)
     let startDate = NSDate()
 
     var displayLink: CADisplayLink!
@@ -44,6 +44,11 @@ class TimerViewController: UIViewController {
 
         let progress = -startDate.timeIntervalSinceNow / fireDate.timeIntervalSinceDate(startDate)
         progressView.progress = Float(progress)
+
+        let timePastExpired = fireDate.timeIntervalSinceNow < -2
+        if timePastExpired {
+            performSegueWithIdentifier("showMapView", sender: self)
+        }
     }
 
     /*
