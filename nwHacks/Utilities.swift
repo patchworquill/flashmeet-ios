@@ -9,7 +9,10 @@
 import Foundation
 import CoreLocation
 
-func async(queue: dispatch_queue_t = dispatch_get_main_queue(), block: () -> ()) {
+func async(block: () -> ()) {
+    async(dispatch_get_main_queue(), block)
+}
+func async(queue: dispatch_queue_t, block: () -> ()) {
     dispatch_async(queue, block)
 }
 

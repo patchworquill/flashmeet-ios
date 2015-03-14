@@ -15,8 +15,11 @@ struct Racer {
     var profilePhoto: UIImage?
 }
 
+private let sharedInstance = DataController()
 class DataController {
-    static let sharedController = DataController()
+    class var sharedController: DataController {
+        return sharedInstance
+    }
 
     func pushLocation(location: CLLocationCoordinate2D) {
         // TODO
