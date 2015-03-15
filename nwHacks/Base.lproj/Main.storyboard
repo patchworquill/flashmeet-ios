@@ -37,13 +37,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FlashMeet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-LW-WBH">
-                                <rect key="frame" x="150" y="106" width="301" height="74"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlashMeet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-LW-WBH">
+                                <rect key="frame" x="160.5" y="106" width="280.5" height="74"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="60"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SZ-EZ-rDH" customClass="FBLoginView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SZ-EZ-rDH" customClass="FBLoginView">
                                 <rect key="frame" x="172" y="254" width="257" height="91"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -56,6 +56,7 @@
                             <constraint firstItem="JSc-yP-gUR" firstAttribute="top" secondItem="nhj-LW-WBH" secondAttribute="bottom" constant="38" id="Pt2-Jp-y9p"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="p0X-dt-fat" secondAttribute="top" constant="429" id="QfC-mE-Pwq"/>
                             <constraint firstAttribute="centerY" secondItem="0SZ-EZ-rDH" secondAttribute="centerY" id="Ths-jd-SFC"/>
+                            <constraint firstItem="0SZ-EZ-rDH" firstAttribute="leading" secondItem="p0X-dt-fat" secondAttribute="leading" constant="172" id="WB3-Er-w8k"/>
                             <constraint firstAttribute="centerX" secondItem="nhj-LW-WBH" secondAttribute="centerX" id="WGy-Tc-cSI"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="JSc-yP-gUR" secondAttribute="bottom" constant="48" id="X6O-5X-y1L"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="leading" secondItem="JSc-yP-gUR" secondAttribute="leading" id="aeF-yd-VsV"/>
@@ -63,6 +64,7 @@
                             <constraint firstAttribute="centerY" secondItem="0SZ-EZ-rDH" secondAttribute="centerY" id="eHu-zp-63n"/>
                             <constraint firstAttribute="centerY" secondItem="JSc-yP-gUR" secondAttribute="centerY" id="gDa-xK-suk"/>
                             <constraint firstAttribute="centerX" secondItem="JSc-yP-gUR" secondAttribute="centerX" id="nzJ-h0-vvk"/>
+                            <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="nhj-LW-WBH" secondAttribute="bottom" constant="74" id="okj-og-aCn"/>
                             <constraint firstAttribute="centerX" secondItem="0SZ-EZ-rDH" secondAttribute="centerX" id="tRQ-MC-YtI"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="trailing" secondItem="JSc-yP-gUR" secondAttribute="trailing" id="yry-af-WeA"/>
                         </constraints>
