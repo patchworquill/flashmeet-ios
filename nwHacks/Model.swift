@@ -64,7 +64,7 @@ class DataController {
         return sharedInstance
     }
 
-    private var fakeLogin = false
+    private var fakeLogin = true
     
     var user: CurrentUser? {
         didSet {
@@ -96,21 +96,34 @@ class DataController {
             "long": location.longitude
         ]
         usersRef.childByAppendingPath(user!.userID).setValue(locationDict)
-        println("i")
     }
     
     func raceListener(raceID: String) {
         var thisRaceRef = Firebase(url:"https://nwhacks.firebaseio.com/races/\(raceID)")
         
         thisRaceRef.observeEventType(.ChildChanged, withBlock: { snapshot in
-            println(snapshot.value)
+            let destID = snapshot.value as String //Force cast as string
+            self.pullDestination(destID)
         })
     }
     
-    func pullDestination() {
-        //TODO: get destination and display in MapKit
+    func pullDestination(destID: String) {
+        var destRef = Firebase(url:"https://nwhacks.firebaseio.com/destinations/\(destID)")
+        
+        destRef.observeEventType(.Value, withBlock: { snapshot in
+            var destDict = snapshot.value as [String: AnyObject]
+            var destName = destDict["name"] as String
+            var destAddress = destDict["address"] as String
+            var destDisc = destDict["description"] as String
+            var destLat = destDict["lat"] as Double
+            var destLong = destDict["long"] as Double
+            var destCoords = CLLocationCoordinate2D(latitude: destLat, longitude: destLong)
+            var finalDest = DestinationLocation(name: destName, adress: destAddress, description: destDisc, location: destCoords)
+            println("\(finalDest)")
+        })
     }
 
+    
 
     func fetchRacers(completion: ([RacerLocation]) -> ()) {
         // TODO
