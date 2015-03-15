@@ -9,14 +9,12 @@
 import UIKit
 import QuartzCore
 
-let brightGreenColor = UIColor(red: (50 / 255), green: (200 / 255), blue: (50 / 255), alpha: 1)
-
 class TimerViewController: UIViewController {
     @IBOutlet var progressView: UAProgressView!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var doneLabel: UILabel!
 
-    var fireDate = NSDate(timeIntervalSinceNow: 5)
+    let fireDate = NSDate(timeIntervalSinceNow: 5)
     let startDate = NSDate()
     var displayLink: CADisplayLink!
 
@@ -24,11 +22,16 @@ class TimerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         progressView.centralView = timeLabel
-        progressView.tintColor = UIColor.redColor()
-        progressView.borderWidth = 2
-        progressView.lineWidth = 10
+//        progressView.layer.backgroundColor = UIColor(red: 90/255, green: 191/255, blue: 115/255, alpha: 1.0).CGColor
+        progressView.tintColor = UIColor(red: 62/255, green: 134/255, blue: 80/255, alpha: 1.0)
+        progressView.layer.masksToBounds = true
+        progressView.borderWidth = 6
+        progressView.lineWidth = 6
+        
+//        let circleView = CustomCircleView.circleWithColor(UIColor.greenColor(), radius: 20)
+//        view.addSubview(circleView)
 
         displayLink = CADisplayLink(target: self, selector: "updateTime")
         displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
@@ -37,11 +40,6 @@ class TimerViewController: UIViewController {
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         displayLink?.paused = true
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     dynamic func updateTime() {
@@ -55,6 +53,7 @@ class TimerViewController: UIViewController {
         progressView.progress = Float(progress)
 
         let timePastExpired = fireDate.timeIntervalSinceNow <= 0
+        
         if timePastExpired {
             timerExpired()
         }
@@ -62,15 +61,15 @@ class TimerViewController: UIViewController {
 
     func timerExpired() {
         displayLink.paused = true
-
         doneLabel.hidden = false
         doneLabel.alpha = 0
 
         UIView.animateWithDuration(0.6) {
             self.timeLabel.alpha = 0
         }
+        
         after(0.25) {
-            self.progressView.tintColor = brightGreenColor
+            self.progressView.tintColor = UIColor.purpleColor()//(red: 80/255, green:200/255, blue:50/255, alpha: 1)
             UIView.animateWithDuration(0.75, animations: {
                 self.doneLabel.alpha = 1
             }, completion: { finished in
@@ -83,10 +82,8 @@ class TimerViewController: UIViewController {
     }
 
     // MARK: - Navigation
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepareForSegue(segue, sender: sender)
-
         transitionController.center = progressView.center
         let destVC = segue.destinationViewController as UIViewController
         destVC.transitioningDelegate = transitionController

@@ -21,6 +21,7 @@
 		0DDEC9221AB57D7E00154E62 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */; };
 		305CBB9E0E7549479048E96C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F96DA22CEDB24EB2B1D7BF7E /* libPods.a */; };
 		590D8D641AB4F5F500ADB83D /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590D8D631AB4F5F500ADB83D /* FirebaseController.swift */; };
+		A522E6BD1AB57C7B00003DCC /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */; };
 		A540822D1AB4BDCE0037864C /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A54082251AB4BDCE0037864C /* SanFranciscoDisplay-Bold.otf */; };
 		A540822E1AB4BDCE0037864C /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A54082261AB4BDCE0037864C /* SanFranciscoDisplay-Heavy.otf */; };
 		A540822F1AB4BDCE0037864C /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A54082271AB4BDCE0037864C /* SanFranciscoDisplay-Light.otf */; };
@@ -62,6 +63,7 @@
 		0DC516311AB41A9300441A4C /* nwHacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwHacksTests.swift; sourceTree = "<group>"; };
 		0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		590D8D631AB4F5F500ADB83D /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		A54082251AB4BDCE0037864C /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
 		A54082261AB4BDCE0037864C /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
 		A54082271AB4BDCE0037864C /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
 				A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */,
+				A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				0DB360511AB4604E001BD5B6 /* TimerViewController.swift in Sources */,
 				0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */,
 				0DA32C1A1AB4CB230089E662 /* Utilities.swift in Sources */,
+				A522E6BD1AB57C7B00003DCC /* CustomCircleView.swift in Sources */,
 				A5600D2D1AB44FC700DC5E78 /* CustomCircularButton.swift in Sources */,
 				0DA32C191AB4CB230089E662 /* Model.swift in Sources */,
 				0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -36,22 +36,21 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SZ-EZ-rDH" customClass="FBLoginView">
-                                <rect key="frame" x="172" y="359" width="257" height="91"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FlashMeet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-LW-WBH">
                                 <rect key="frame" x="150" y="106" width="301" height="74"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="60"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SZ-EZ-rDH" customClass="FBLoginView">
+                                <rect key="frame" x="172" y="254" width="257" height="91"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bRg-dV-DSU" firstAttribute="top" secondItem="0SZ-EZ-rDH" secondAttribute="bottom" constant="113" id="69u-Ue-KUU"/>
                             <constraint firstItem="nhj-LW-WBH" firstAttribute="top" secondItem="n2t-yP-KtY" secondAttribute="bottom" constant="86" id="Gik-F8-eAC"/>
-                            <constraint firstItem="bRg-dV-DSU" firstAttribute="top" secondItem="0SZ-EZ-rDH" secondAttribute="bottom" constant="150" id="IAi-hQ-aoj"/>
                             <constraint firstItem="bRg-dV-DSU" firstAttribute="top" secondItem="0SZ-EZ-rDH" secondAttribute="bottom" constant="120" id="LYW-rr-tUk"/>
                             <constraint firstItem="JSc-yP-gUR" firstAttribute="top" secondItem="nhj-LW-WBH" secondAttribute="bottom" constant="38" id="Pt2-Jp-y9p"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="p0X-dt-fat" secondAttribute="top" constant="429" id="QfC-mE-Pwq"/>
@@ -59,6 +58,8 @@
                             <constraint firstAttribute="centerX" secondItem="nhj-LW-WBH" secondAttribute="centerX" id="WGy-Tc-cSI"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="JSc-yP-gUR" secondAttribute="bottom" constant="48" id="X6O-5X-y1L"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="leading" secondItem="JSc-yP-gUR" secondAttribute="leading" id="aeF-yd-VsV"/>
+                            <constraint firstAttribute="centerX" secondItem="0SZ-EZ-rDH" secondAttribute="centerX" id="cCp-Hb-JqK"/>
+                            <constraint firstAttribute="centerY" secondItem="0SZ-EZ-rDH" secondAttribute="centerY" id="eHu-zp-63n"/>
                             <constraint firstAttribute="centerY" secondItem="JSc-yP-gUR" secondAttribute="centerY" id="gDa-xK-suk"/>
                             <constraint firstAttribute="centerX" secondItem="JSc-yP-gUR" secondAttribute="centerX" id="nzJ-h0-vvk"/>
                             <constraint firstAttribute="centerX" secondItem="0SZ-EZ-rDH" secondAttribute="centerX" id="tRQ-MC-YtI"/>
@@ -70,6 +71,7 @@
                                 <exclude reference="Ths-jd-SFC"/>
                                 <exclude reference="X6O-5X-y1L"/>
                                 <exclude reference="aeF-yd-VsV"/>
+                                <exclude reference="cCp-Hb-JqK"/>
                                 <exclude reference="yry-af-WeA"/>
                                 <exclude reference="69u-Ue-KUU"/>
                                 <exclude reference="LYW-rr-tUk"/>
@@ -133,11 +135,11 @@
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB6-lr-h85" userLabel="Go Label">
                                 <rect key="frame" x="215" y="262" width="171.5" height="76.5"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="64"/>
-                                <color key="textColor" red="0.19607843137254902" green="0.78431372549019607" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.18431372549019609" green="0.45490196078431372" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGi-yN-yVJ" customClass="UAProgressView">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGi-yN-yVJ" customClass="UAProgressView">
+                                <rect key="frame" x="150" y="151" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="1vt-aU-ZA1"/>
                                     <constraint firstAttribute="height" constant="300" id="n4T-dx-3cO"/>
@@ -161,9 +163,13 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="VGA-m2-Mpl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="64"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.19215686274509805" green="0.54117647058823526" blue="0.32156862745098042" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="luU-Yn-P3o" customClass="CustomCircleView" customModule="nwHacks" customModuleProvider="target">
+                                <rect key="frame" x="226" y="421" width="201" height="171"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
