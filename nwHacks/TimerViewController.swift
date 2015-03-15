@@ -24,15 +24,10 @@ class TimerViewController: UIViewController {
         super.viewDidLoad()
         
         progressView.centralView = timeLabel
-//        progressView.layer.backgroundColor = UIColor(red: 90/255, green: 191/255, blue: 115/255, alpha: 1.0).CGColor
         progressView.tintColor = UIColor(red: 62/255, green: 134/255, blue: 80/255, alpha: 1.0)
         progressView.layer.masksToBounds = true
         progressView.borderWidth = 6
         progressView.lineWidth = 6
-        
-//        let circleView = CustomCircleView.circleWithColor(UIColor.greenColor(), radius: 20)
-//        view.addSubview(circleView)
-
         displayLink = CADisplayLink(target: self, selector: "updateTime")
         displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
     }
