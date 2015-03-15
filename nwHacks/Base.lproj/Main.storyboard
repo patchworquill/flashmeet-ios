@@ -38,8 +38,8 @@
                                 <rect key="frame" x="219" y="429" width="164" height="58"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FlashMeet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-LW-WBH">
-                                <rect key="frame" x="150" y="116" width="301" height="74"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FlashMeet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-LW-WBH">
+                                <rect key="frame" x="150" y="105" width="301" height="74"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="60"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -48,7 +48,10 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bRg-dV-DSU" firstAttribute="top" secondItem="0SZ-EZ-rDH" secondAttribute="bottom" constant="113" id="69u-Ue-KUU"/>
+                            <constraint firstItem="nhj-LW-WBH" firstAttribute="top" secondItem="n2t-yP-KtY" secondAttribute="bottom" constant="85" id="Gik-F8-eAC"/>
+                            <constraint firstItem="JSc-yP-gUR" firstAttribute="top" secondItem="nhj-LW-WBH" secondAttribute="bottom" constant="38" id="Pt2-Jp-y9p"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="p0X-dt-fat" secondAttribute="top" constant="429" id="QfC-mE-Pwq"/>
+                            <constraint firstAttribute="centerX" secondItem="nhj-LW-WBH" secondAttribute="centerX" id="WGy-Tc-cSI"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="JSc-yP-gUR" secondAttribute="bottom" constant="48" id="X6O-5X-y1L"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="leading" secondItem="JSc-yP-gUR" secondAttribute="leading" id="aeF-yd-VsV"/>
                             <constraint firstAttribute="centerY" secondItem="JSc-yP-gUR" secondAttribute="centerY" id="gDa-xK-suk"/>
@@ -71,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iid-AS-yvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-921" y="383"/>
+            <point key="canvasLocation" x="-922" y="358"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -132,14 +135,14 @@
                                     <constraint firstAttribute="height" constant="300" id="n4T-dx-3cO"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR RACE BEGINS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49O-Op-qti">
-                                <rect key="frame" x="217" y="28" width="167" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="YOUR RACE BEGINS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49O-Op-qti">
+                                <rect key="frame" x="217" y="64" width="167" height="13"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-iL-ykn">
-                                <rect key="frame" x="280" y="57" width="41" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-iL-ykn">
+                                <rect key="frame" x="280" y="85" width="41" height="16"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -148,6 +151,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mGi-yN-yVJ" firstAttribute="centerX" secondItem="RUX-rs-BjR" secondAttribute="centerX" id="3Zh-e1-0ui"/>
+                            <constraint firstItem="49O-Op-qti" firstAttribute="top" secondItem="LtA-0P-afi" secondAttribute="bottom" constant="45" id="4gF-Dy-6Wp"/>
+                            <constraint firstAttribute="centerX" secondItem="Si6-iL-ykn" secondAttribute="centerX" id="FHp-t7-FYO"/>
+                            <constraint firstItem="Si6-iL-ykn" firstAttribute="top" secondItem="49O-Op-qti" secondAttribute="bottom" constant="2" id="KMG-G0-9fb"/>
+                            <constraint firstAttribute="centerX" secondItem="49O-Op-qti" secondAttribute="centerX" id="KWV-tc-yhp"/>
                             <constraint firstItem="mGi-yN-yVJ" firstAttribute="centerY" secondItem="RUX-rs-BjR" secondAttribute="centerY" id="W2L-Ul-jDn"/>
                         </constraints>
                     </view>
