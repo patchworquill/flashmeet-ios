@@ -97,6 +97,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var updateTimer: NSTimer!
     var racerLocations: [Racer: RacerAnnotation] = [:]
     var currentLocation: MKUserLocation?
+    var hasUpdatedMapVisibility = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,7 +156,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
 
     func updateMapVisibility() {
-        mapView.showAnnotations(mapView.annotations, animated: true)
+        let animated = hasUpdatedMapVisibility
+        mapView.showAnnotations(mapView.annotations, animated: animated)
+        hasUpdatedMapVisibility = true
     }
 
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {

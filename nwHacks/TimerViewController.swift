@@ -15,8 +15,9 @@ class TimerViewController: UIViewController {
 
     var fireDate = NSDate(timeIntervalSinceNow: 5)
     let startDate = NSDate()
-
     var displayLink: CADisplayLink!
+
+    lazy var transitionController = AKCircleMaskTransitionController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +53,15 @@ class TimerViewController: UIViewController {
         }
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepareForSegue(segue, sender: sender)
+
+        transitionController.center = progressView.center
+        let destVC = segue.destinationViewController as UIViewController
+        destVC.transitioningDelegate = transitionController
+        destVC.modalPresentationStyle = .Custom
     }
-    */
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6F60801AB5316600311CAD /* AKCircleMaskTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F607F1AB5316600311CAD /* AKCircleMaskTransitionController.swift */; };
 		0DA32C191AB4CB230089E662 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA32C171AB4CB230089E662 /* Model.swift */; };
 		0DA32C1A1AB4CB230089E662 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA32C181AB4CB230089E662 /* Utilities.swift */; };
 		0DB360511AB4604E001BD5B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB360501AB4604E001BD5B6 /* TimerViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		0D6C20C01AB4E941002D949B /* UBC.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UBC.gpx; sourceTree = "<group>"; };
+		0D6F607F1AB5316600311CAD /* AKCircleMaskTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKCircleMaskTransitionController.swift; sourceTree = "<group>"; };
 		0DA32C171AB4CB230089E662 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0DA32C181AB4CB230089E662 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0DB360501AB4604E001BD5B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		A5600D2F1AB4549900DC5E78 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0D6F607F1AB5316600311CAD /* AKCircleMaskTransitionController.swift */,
 				0DB360501AB4604E001BD5B6 /* TimerViewController.swift */,
 				0DC5161D1AB41A9300441A4C /* MapViewController.swift */,
 				0DB95E9F1AB439CE00074827 /* StartViewController.swift */,
@@ -265,11 +268,11 @@
 				TargetAttributes = {
 					0DC516151AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 2S3D8J8M3T;
+						DevelopmentTeam = 92N82VX6QZ;
 					};
 					0DC5162A1AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 2S3D8J8M3T;
+						DevelopmentTeam = 92N82VX6QZ;
 						TestTargetID = 0DC516151AB41A9300441A4C;
 					};
 				};
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				590D8D641AB4F5F500ADB83D /* FirebaseController.swift in Sources */,
+				0D6F60801AB5316600311CAD /* AKCircleMaskTransitionController.swift in Sources */,
 				0DB360511AB4604E001BD5B6 /* TimerViewController.swift in Sources */,
 				0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */,
 				0DA32C1A1AB4CB230089E662 /* Utilities.swift in Sources */,
