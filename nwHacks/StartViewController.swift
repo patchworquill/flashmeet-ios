@@ -20,7 +20,6 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
         super.viewDidLoad()
 
         startButton.addTarget(self, action: "startButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-
         loginButton.readPermissions = ["public_profile", "user_friends"]
         loginButton.delegate = self
         updateLoginState()

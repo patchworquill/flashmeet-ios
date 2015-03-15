@@ -8,9 +8,9 @@
 
 import Foundation
 
-var rootRef = Firebase(url:"https://nwhacks.firebaseio.com/")
-var racesRef = Firebase(url:"https://nwhacks.firebaseio.com/races")
-var usersRef = Firebase(url:"https://nwhacks.firebaseio.com/users")
+let rootRef = Firebase(url:"https://nwhacks.firebaseio.com/")
+let racesRef = Firebase(url:"https://nwhacks.firebaseio.com/races")
+let usersRef = Firebase(url:"https://nwhacks.firebaseio.com/users")
 
 
 
