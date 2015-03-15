@@ -9,4 +9,5 @@
 #import <UAProgressView/UAProgressView.h>
 #import <Firebase/Firebase.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <SVPulsingAnnotationView/SVPulsingAnnotationView.h>
 
