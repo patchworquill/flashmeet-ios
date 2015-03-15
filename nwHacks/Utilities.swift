@@ -25,6 +25,12 @@ extension CLLocationCoordinate2D {
     func shiftBy(dlat: CLLocationDegrees, _ dlon: CLLocationDegrees) -> CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitude + dlat, longitude: longitude + dlon)
     }
+
+    func distanceFromCoordinate(other: CLLocationCoordinate2D) -> CLLocationDistance {
+        let thisLoc = CLLocation(latitude: latitude, longitude: longitude)
+        let otherLoc = CLLocation(latitude: other.latitude, longitude: other.longitude)
+        return thisLoc.distanceFromLocation(otherLoc)
+    }
 }
 
 class Box<T> {

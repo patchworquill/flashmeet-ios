@@ -65,7 +65,8 @@ class DataController {
         return sharedInstance
     }
 
-    private var fakeLogin = true
+    private let fakeLogin = true
+    private let fakeRace = true
     
     var user: CurrentUser? {
         didSet {
@@ -79,6 +80,8 @@ class DataController {
         return user != nil
     }
 
+    var raceID: String?
+
     init() {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let userID = defaults.valueForKey("userID") as? String {
@@ -89,6 +92,8 @@ class DataController {
         if user == nil && fakeLogin {
             user = CurrentUser(userID: "abcd", name: "Joe Schmo")
         }
+
+        if fakeRace { raceID = "-JkRBcXhZggcIwx-Ut_J" }
     }
 
     func pushLocation(location: CLLocationCoordinate2D) {
@@ -99,8 +104,8 @@ class DataController {
         usersRef.childByAppendingPath(user!.userID).setValue(locationDict)
     }
 
-    func fetchRaceInfo(raceID: String, completion: (DestinationLocation) -> ()) {
-        var thisRaceRef = Firebase(url:"https://nwhacks.firebaseio.com/races/\(raceID)")
+    func fetchRaceInfo(completion: (DestinationLocation) -> ()) {
+        var thisRaceRef = racesRef.childByAppendingPath(raceID!)
 
         thisRaceRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             func getDestID(snapshot: FDataSnapshot) -> Int? {

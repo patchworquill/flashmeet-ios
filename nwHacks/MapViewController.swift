@@ -98,7 +98,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var racerLocations: [Racer: RacerAnnotation] = [:]
     var destLocation: DestinationLocation?
     var currentLocation: MKUserLocation?
+
     var hasUpdatedMapVisibility = false
+    var arrivedAtDestination = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +112,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        DataController.sharedController.fetchRaceInfo("1") { destLocation in
+        DataController.sharedController.fetchRaceInfo { destLocation in
             self.updateDestination(destLocation)
         }
 
@@ -149,6 +151,28 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
 
+    func isLocationAtDestination(loc: CLLocationCoordinate2D) -> Bool {
+        if let dest = destLocation?.location {
+            let distanceThreshold = 100.0 // meters
+            return loc.distanceFromCoordinate(dest) < distanceThreshold
+        } else {
+            return false
+        }
+    }
+
+    func currentUserArrivedAtDestination() {
+        if arrivedAtDestination { return }
+        arrivedAtDestination = true
+
+        let raceID = DataController.sharedController.raceID!
+        let userID = DataController.sharedController.user!.userID
+
+        let timestamp = leaderboardDateFormatter.stringFromDate(NSDate())
+        leaderboardEndpoint(raceID).childByAppendingPath(userID).setValue(timestamp, withCompletionBlock: { eror, endpoint in
+            self.performSegueWithIdentifier("showLeaderboard", sender: self)
+        })
+    }
+
     func updateRacerLocations(newLocations: [RacerLocation]) {
         for loc in newLocations {
             if let annotation = racerLocations[loc.racer] {
@@ -157,6 +181,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 let annotation = RacerAnnotation(racerLocation: loc)
                 racerLocations[loc.racer] = annotation
                 mapView.addAnnotation(annotation)
+            }
+
+            if isLocationAtDestination(loc.location) {
+                // TODO: Handle other user arriving at destination
             }
         }
         updateMapVisibility()
@@ -185,7 +213,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         currentLocation = userLocation
         updateMapVisibility()
 
-        DataController.sharedController.pushLocation(userLocation.location.coordinate)
+        let userCoords = userLocation.location.coordinate
+        DataController.sharedController.pushLocation(userCoords)
+
+        if isLocationAtDestination(userCoords) {
+            currentUserArrivedAtDestination()
+        }
     }
 
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {

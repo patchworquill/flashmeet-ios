@@ -13,5 +13,7 @@ var racesRef = Firebase(url:"https://nwhacks.firebaseio.com/races")
 var usersRef = Firebase(url:"https://nwhacks.firebaseio.com/users")
 
 
-
+func leaderboardEndpoint(raceID: String) -> Firebase {
+    return racesRef.childByAppendingPath(raceID).childByAppendingPath("finishes")
+}
 
