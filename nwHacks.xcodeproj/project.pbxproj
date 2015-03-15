@@ -135,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				0DA32C161AB4CB0A0089E662 /* Model */,
-				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
 				A5600D2E1AB4549400DC5E78 /* View */,
 				A5600D2F1AB4549900DC5E78 /* Controller */,
 				0DC5161F1AB41A9300441A4C /* Main.storyboard */,
@@ -192,6 +191,7 @@
 		A5600D2E1AB4549400DC5E78 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
 				A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */,
 			);
 			name = View;

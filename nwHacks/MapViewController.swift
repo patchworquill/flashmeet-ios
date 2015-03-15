@@ -163,7 +163,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
 
     func updateDestination(dest: DestinationLocation) {
-        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = dest.location
+        mapView.addAnnotation(annotation)
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
