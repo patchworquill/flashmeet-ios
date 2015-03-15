@@ -32,9 +32,15 @@ let leaderboardDateFormatter: NSDateFormatter = {
     return formatter
 }()
 
-class LeaderboardViewController: UIViewController {
+class LeaderboardViewController: UITableViewController {
     var handle: UInt?
     var entries = NSMutableSet()
+
+    var sortedEntries: [LeaderboardEntry] {
+        return (entries.allObjects as [LeaderboardEntry]).sorted({ (lhs, rhs) -> Bool in
+            return lhs.finishedDate.compare(rhs.finishedDate) == .OrderedAscending
+        })
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +56,25 @@ class LeaderboardViewController: UIViewController {
                 let entry = LeaderboardEntry(userID: userID, finishedDate: date)
                 self.entries.addObject(entry)
             }
+            self.tableView.reloadData()
         })
+    }
+
+    func fetchUserInfo() {
+        // TODO: Get usernames
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return entries.count
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("LeaderboardCell", forIndexPath: indexPath) as LeaderboardCell
+        let entry = sortedEntries[indexPath.row]
+
+        cell.profileView.profileID = entry.userID
+        // TODO: Set username
+
+        return cell
     }
 }

@@ -19,6 +19,7 @@
 		0DC516261AB41A9300441A4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC516241AB41A9300441A4C /* LaunchScreen.xib */; };
 		0DC516321AB41A9300441A4C /* nwHacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC516311AB41A9300441A4C /* nwHacksTests.swift */; };
 		0DDEC9221AB57D7E00154E62 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */; };
+		0DDEC9241AB58A6E00154E62 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEC9231AB58A6E00154E62 /* LeaderboardCell.swift */; };
 		305CBB9E0E7549479048E96C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F96DA22CEDB24EB2B1D7BF7E /* libPods.a */; };
 		590D8D641AB4F5F500ADB83D /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590D8D631AB4F5F500ADB83D /* FirebaseController.swift */; };
 		A522E6BD1AB57C7B00003DCC /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */; };
@@ -62,6 +63,7 @@
 		0DC516301AB41A9300441A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DC516311AB41A9300441A4C /* nwHacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwHacksTests.swift; sourceTree = "<group>"; };
 		0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		0DDEC9231AB58A6E00154E62 /* LeaderboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		590D8D631AB4F5F500ADB83D /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		A54082251AB4BDCE0037864C /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		A5600D2E1AB4549400DC5E78 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DDEC9231AB58A6E00154E62 /* LeaderboardCell.swift */,
 				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
 				A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */,
 				A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */,
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				590D8D641AB4F5F500ADB83D /* FirebaseController.swift in Sources */,
+				0DDEC9241AB58A6E00154E62 /* LeaderboardCell.swift in Sources */,
 				0D6F60801AB5316600311CAD /* AKCircleMaskTransitionController.swift in Sources */,
 				0DDEC9221AB57D7E00154E62 /* LeaderboardViewController.swift in Sources */,
 				0DB360511AB4604E001BD5B6 /* TimerViewController.swift in Sources */,
