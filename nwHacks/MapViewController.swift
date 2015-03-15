@@ -96,6 +96,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     var updateTimer: NSTimer!
     var racerLocations: [Racer: RacerAnnotation] = [:]
+    var currentLocation: MKUserLocation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,6 +151,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 mapView.addAnnotation(annotation)
             }
         }
+        updateMapVisibility()
+    }
+
+    func updateMapVisibility() {
+        mapView.showAnnotations(mapView.annotations, animated: true)
     }
 
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -159,17 +165,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
 
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
-        mapView.setUserTrackingMode(.Follow, animated: true)
-
+        currentLocation = userLocation
         DataController.sharedController.pushLocation(userLocation.location.coordinate)
-        
-        let camera = MKMapCamera()
-        camera.centerCoordinate = userLocation.location.coordinate
-        camera.heading = 0
-        camera.pitch = 80
-        camera.altitude = 100
-        
-        mapView.setCamera(camera, animated: true)
+        updateMapVisibility()
     }
 
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
