@@ -9,6 +9,14 @@
 import Foundation
 import CoreLocation
 
+struct RaceSession {
+    var raceID: String
+    var initiatorID: String
+    var participantIDs: [String]
+    var participantStartDates: [String: NSDate]
+    var destinationID: Int
+}
+
 struct Racer: Equatable, Hashable {
     var userID: String
     var name: String
@@ -80,7 +88,11 @@ class DataController {
         return user != nil
     }
 
-    var raceID: String?
+    var raceSession: RaceSession?
+
+    var raceID: String? {
+        return raceSession?.raceID
+    }
 
     init() {
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -93,7 +105,9 @@ class DataController {
             user = CurrentUser(userID: "abcd", name: "Joe Schmo")
         }
 
-        if fakeRace { raceID = "-JkRBcXhZggcIwx-Ut_J" }
+        if fakeRace {
+            raceSession = RaceSession(raceID: "-JkRBcXhZggcIwx-Ut_J", initiatorID: "1234", participantIDs: ["1234"], participantStartDates: ["1234": NSDate()], destinationID: 1)
+        }
     }
 
     func pushLocation(location: CLLocationCoordinate2D) {
@@ -108,51 +122,70 @@ class DataController {
         var thisRaceRef = racesRef.childByAppendingPath(raceID!)
 
         thisRaceRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            func getDestID(snapshot: FDataSnapshot) -> Int? {
-                if let dict = snapshot.value as? NSDictionary {
-                    return (dict["destination"] as Int)
-                } else {
-                    return nil
-                }
-            }
-            
+            let dict = snapshot.value as NSDictionary
             // No if-let because Swift bugs :(
-            let destID = getDestID(snapshot)
-            if destID != nil {
-                self.fetchDestinationInfo(destID!, completion)
-            } else {
-                // Wait until a change occurs if no value is available
-                thisRaceRef.observeSingleEventOfType(.ChildChanged, withBlock: { snapshot in
-                    let destID = getDestID(snapshot)!
-                    self.fetchDestinationInfo(destID, completion)
-                })
+            let destID = dict["destination"] as Int
+            let initiator = dict["initiator"] as String
+            let participantDict = dict["participants"] as [String: String]
+            let participantIDs = participantDict.keys.array
+
+            var startDates: [String: NSDate] = [:]
+            for (pid, timestamp) in participantDict {
+                startDates[pid] = leaderboardDateFormatter.dateFromString(timestamp)
             }
+
+            let session = RaceSession(raceID: self.raceID!, initiatorID: initiator, participantIDs: participantIDs, participantStartDates: startDates, destinationID: destID)
+            self.fetchDestinationInfo(destID, completion: completion)
+
+//            if destID != nil {
+//                self.fetchDestinationInfo(destID!, completion)
+//            } else {
+//                // Wait until a change occurs if no value is available
+//                thisRaceRef.observeSingleEventOfType(.ChildChanged, withBlock: { snapshot in
+//                    let destID = getDestID(snapshot)!
+//                    self.fetchDestinationInfo(destID, completion)
+//                })
+//            }
         })
     }
     
     private func fetchDestinationInfo(destID: Int, completion: (DestinationLocation) -> ()) {
-        var destRef = Firebase(url:"https://nwhacks.firebaseio.com/destinations/\(destID)")
-        
-        destRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            var destDict = snapshot.value as NSDictionary
-            var destName = destDict["name"] as String
-            var destAddress = destDict["address"] as String
-            var destDisc = destDict["description"] as String
-            var destLat = destDict["lat"] as Double
-            var destLong = destDict["long"] as Double
-            var destCoords = CLLocationCoordinate2D(latitude: destLat, longitude: destLong)
-            var finalDest = DestinationLocation(destID: destID, name: destName, adress: destAddress, description: destDisc, location: destCoords)
+        let endpoint = destRef.childByAppendingPath(String(destID))
+        endpoint.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            let destDict = snapshot.value as NSDictionary
+            let destName = destDict["name"] as String
+            let destAddress = destDict["address"] as String
+            let destDisc = destDict["description"] as String
+            let destLat = destDict["lat"] as Double
+            let destLong = destDict["long"] as Double
+            let destCoords = CLLocationCoordinate2D(latitude: destLat, longitude: destLong)
+            let finalDest = DestinationLocation(destID: destID, name: destName, adress: destAddress, description: destDisc, location: destCoords)
             completion(finalDest)
         })
     }
 
-    
-
     func fetchRacers(completion: ([RacerLocation]) -> ()) {
-        // TODO
-        async {
-            completion(self.sampleRacerData)
+        if fakeRace {
+            async {
+                completion(self.sampleRacerData)
+            }
+            return
         }
+
+        usersRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            let dict = snapshot.value as NSDictionary
+            var locations: [RacerLocation] = []
+            for pid in self.raceSession!.participantIDs {
+                if let locDict = dict[pid] as? NSDictionary {
+                    let racer = Racer(userID: pid, name: "A Name")
+                    let lat = locDict["lat"] as Double
+                    let lon = locDict["long"] as Double
+                    let coord = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                    locations.append(RacerLocation(racer: racer, location: coord))
+                }
+            }
+            completion(locations)
+        })
     }
 
     private let startDate = NSDate()

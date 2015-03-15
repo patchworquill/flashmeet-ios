@@ -11,7 +11,7 @@ import Foundation
 let rootRef = Firebase(url:"https://nwhacks.firebaseio.com/")
 let racesRef = Firebase(url:"https://nwhacks.firebaseio.com/races")
 let usersRef = Firebase(url:"https://nwhacks.firebaseio.com/users")
-
+let destRef = Firebase(url:"https://nwhacks.firebaseio.com/destinations")
 
 func leaderboardEndpoint(raceID: String) -> Firebase {
     return racesRef.childByAppendingPath(raceID).childByAppendingPath("finishes")
