@@ -43,37 +43,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A5EB98291AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
+		A5EB984C1AB5D313007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
+			containerPortal = A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5198C701A05D2DC93CF3E7A7;
 			remoteInfo = Pods;
 		};
-		A5EB982B1AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
+		A5EB984E1AB5D313007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
+			containerPortal = A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6AF060BEE6DCD701F02BB2C4;
 			remoteInfo = "Pods-Bolts";
 		};
-		A5EB982D1AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
+		A5EB98501AB5D313007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
+			containerPortal = A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 17D3E56D760DA32F9E0E5629;
 			remoteInfo = "Pods-Facebook-iOS-SDK";
 		};
-		A5EB982F1AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
+		A5EB98521AB5D313007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
+			containerPortal = A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A76AAD8B966514C1DDDD108C;
 			remoteInfo = "Pods-SVPulsingAnnotationView";
 		};
-		A5EB98311AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
+		A5EB98541AB5D313007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
+			containerPortal = A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 26B6771DBB2A38267243A298;
 			remoteInfo = "Pods-UAProgressView";
@@ -118,9 +118,9 @@
 		A57F9C241AB5BDB5009F9E1A /* TimerViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewUIHelper.swift; sourceTree = "<group>"; };
 		A57F9C261AB5BDBA009F9E1A /* MapViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewUIHelper.swift; sourceTree = "<group>"; };
 		A57F9C281AB5BDC0009F9E1A /* StartViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewUIHelper.swift; sourceTree = "<group>"; };
-		A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-		B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = FlashMeet/Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
+		B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,6 @@
 				0DC516181AB41A9300441A4C /* FlashMeet */,
 				0DC516171AB41A9300441A4C /* Products */,
 				015C6B6EDACC47F48EE48355 /* Frameworks */,
-				FBB8C03001A9EADABBE0D620 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +190,7 @@
 		0DC516191AB41A9300441A4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FBB8C03001A9EADABBE0D620 /* Pods */,
 				0D6C20C01AB4E941002D949B /* UBC.gpx */,
 				0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */,
 				A54082241AB4BDCE0037864C /* Fonts */,
@@ -283,14 +283,14 @@
 			path = Annotation;
 			sourceTree = "<group>";
 		};
-		A5EB981D1AB5CFFD007FAF06 /* Products */ = {
+		A5EB98451AB5D313007FAF06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5EB982A1AB5CFFD007FAF06 /* libPods.a */,
-				A5EB982C1AB5CFFD007FAF06 /* libPods-Bolts.a */,
-				A5EB982E1AB5CFFD007FAF06 /* libPods-Facebook-iOS-SDK.a */,
-				A5EB98301AB5CFFD007FAF06 /* libPods-SVPulsingAnnotationView.a */,
-				A5EB98321AB5CFFD007FAF06 /* libPods-UAProgressView.a */,
+				A5EB984D1AB5D313007FAF06 /* libPods.a */,
+				A5EB984F1AB5D313007FAF06 /* libPods-Bolts.a */,
+				A5EB98511AB5D313007FAF06 /* libPods-Facebook-iOS-SDK.a */,
+				A5EB98531AB5D313007FAF06 /* libPods-SVPulsingAnnotationView.a */,
+				A5EB98551AB5D313007FAF06 /* libPods-UAProgressView.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,11 +298,11 @@
 		FBB8C03001A9EADABBE0D620 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */,
+				A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */,
 				DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */,
 				B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */,
 			);
-			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,8 +355,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A5EB981D1AB5CFFD007FAF06 /* Products */;
-					ProjectRef = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
+					ProductGroup = A5EB98451AB5D313007FAF06 /* Products */;
+					ProjectRef = A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -367,39 +367,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A5EB982A1AB5CFFD007FAF06 /* libPods.a */ = {
+		A5EB984D1AB5D313007FAF06 /* libPods.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libPods.a;
-			remoteRef = A5EB98291AB5CFFD007FAF06 /* PBXContainerItemProxy */;
+			remoteRef = A5EB984C1AB5D313007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A5EB982C1AB5CFFD007FAF06 /* libPods-Bolts.a */ = {
+		A5EB984F1AB5D313007FAF06 /* libPods-Bolts.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-Bolts.a";
-			remoteRef = A5EB982B1AB5CFFD007FAF06 /* PBXContainerItemProxy */;
+			remoteRef = A5EB984E1AB5D313007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A5EB982E1AB5CFFD007FAF06 /* libPods-Facebook-iOS-SDK.a */ = {
+		A5EB98511AB5D313007FAF06 /* libPods-Facebook-iOS-SDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-Facebook-iOS-SDK.a";
-			remoteRef = A5EB982D1AB5CFFD007FAF06 /* PBXContainerItemProxy */;
+			remoteRef = A5EB98501AB5D313007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A5EB98301AB5CFFD007FAF06 /* libPods-SVPulsingAnnotationView.a */ = {
+		A5EB98531AB5D313007FAF06 /* libPods-SVPulsingAnnotationView.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-SVPulsingAnnotationView.a";
-			remoteRef = A5EB982F1AB5CFFD007FAF06 /* PBXContainerItemProxy */;
+			remoteRef = A5EB98521AB5D313007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A5EB98321AB5CFFD007FAF06 /* libPods-UAProgressView.a */ = {
+		A5EB98551AB5D313007FAF06 /* libPods-UAProgressView.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-UAProgressView.a";
-			remoteRef = A5EB98311AB5CFFD007FAF06 /* PBXContainerItemProxy */;
+			remoteRef = A5EB98541AB5D313007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -438,7 +438,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/FlashMeet/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D21A55116AAD462DB54F924B /* Check Pods Manifest.lock */ = {
@@ -453,7 +453,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"FlashMeet/Podfile.lock\" \"FlashMeet/Pods/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -600,6 +600,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "FlashMeet/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/FlashMeet/Pods";
 				PRODUCT_NAME = FlashMeet;
 				SWIFT_OBJC_BRIDGING_HEADER = "FlashMeet/Supporting Files/nwHacks-Bridging-Header.h";
 			};
@@ -613,6 +614,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "FlashMeet/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/FlashMeet/Pods";
 				PRODUCT_NAME = FlashMeet;
 				SWIFT_OBJC_BRIDGING_HEADER = "FlashMeet/Supporting Files/nwHacks-Bridging-Header.h";
 			};
