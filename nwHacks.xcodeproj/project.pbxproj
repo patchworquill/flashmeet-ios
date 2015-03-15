@@ -268,11 +268,11 @@
 				TargetAttributes = {
 					0DC516151AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 92N82VX6QZ;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					0DC5162A1AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 92N82VX6QZ;
+						DevelopmentTeam = 2S3D8J8M3T;
 						TestTargetID = 0DC516151AB41A9300441A4C;
 					};
 				};

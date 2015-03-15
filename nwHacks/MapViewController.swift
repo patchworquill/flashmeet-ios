@@ -161,6 +161,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         hasUpdatedMapVisibility = true
     }
 
+    func updateDestination(dest: DestinationLocation) {
+        
+    }
+    
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedAlways {
             showUserLocation()
@@ -169,10 +173,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         currentLocation = userLocation
+        DataController.sharedController.raceListener("2")
         DataController.sharedController.pushLocation(userLocation.location.coordinate)
+        DataController.sharedController.pullDestination("0")
+        
         
         updateMapVisibility()
-        DataController.sharedController.raceListener("2")
         
         let camera = MKMapCamera()
         camera.centerCoordinate = userLocation.location.coordinate
