@@ -57,7 +57,7 @@ class DataController {
         return sharedInstance
     }
 
-    private var fakeLogin = true
+    private var fakeLogin = false
     
     var user: CurrentUser? {
         didSet {

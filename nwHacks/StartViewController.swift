@@ -19,6 +19,7 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
 
         startButton.addTarget(self, action: "startButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
 
+        loginButton.readPermissions = ["public_profile", "user_friends"]
         loginButton.delegate = self
         updateLoginState()
     }
@@ -36,5 +37,9 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
     func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
         DataController.sharedController.user = CurrentUser(userID: user.objectID, name: user.name)
         updateLoginState()
+    }
+
+    func loginView(loginView: FBLoginView!, handleError error: NSError!) {
+        println("Error! \(error)")
     }
 }
