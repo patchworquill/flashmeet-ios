@@ -89,6 +89,7 @@ class DataController {
     }
 
     var raceSession: RaceSession?
+    var destination: DestinationLocation?
 
     var raceID: String? {
         return raceSession?.raceID
@@ -160,6 +161,7 @@ class DataController {
             let destLong = destDict["long"] as Double
             let destCoords = CLLocationCoordinate2D(latitude: destLat, longitude: destLong)
             let finalDest = DestinationLocation(destID: destID, name: destName, adress: destAddress, description: destDisc, location: destCoords)
+            self.destination = finalDest
             completion(finalDest)
         })
     }
@@ -188,17 +190,47 @@ class DataController {
         })
     }
 
-    private let startDate = NSDate()
+    private lazy var startDate = NSDate()
     private var sampleRacerData: [RacerLocation] {
-        let ubc = CLLocationCoordinate2D(latitude: 49.266432, longitude: -123.245487)
-        let offset = -startDate.timeIntervalSinceNow / 10000
-        return [
-            RacerLocation(
-                racer: Racer(userID: "abcd",
-                                name: "John Smith"),
-                location: ubc.shiftBy(offset, offset)
+        struct FakeUser {
+            var location: CLLocationCoordinate2D
+            var speedFactor: Double
+        }
+
+        let defaultTime = 30.0 // seconds
+        let startLocations = [
+            "abcd": FakeUser(
+                location: CLLocationCoordinate2D(latitude: 49.255642, longitude: -123.236566),
+                speedFactor: 1.5
+            ),
+            "defg": FakeUser(
+                location: CLLocationCoordinate2D(latitude: 49.263680, longitude: -123.196869),
+                speedFactor: 1.2
+            ),
+            "currentUser": FakeUser(
+                location: CLLocationCoordinate2D(latitude: 49.273229, longitude: -123.247080),
+                speedFactor: 1.0
             )
         ]
+
+        var currentLocations: [RacerLocation] = []
+        for (uid, user) in startLocations {
+            var coord = user.location
+            if let destCoord = destination?.location {
+                let dlat = destCoord.latitude - coord.latitude
+                let dlon = destCoord.longitude - coord.longitude
+                let timeToDest = defaultTime / user.speedFactor
+                let percentComplete = min(-startDate.timeIntervalSinceNow / timeToDest, 1)
+                coord = coord.shiftBy(dlat * percentComplete, dlon * percentComplete)
+            }
+            let location = RacerLocation(
+                racer: Racer(userID: uid, name: "John Smith"),
+                location: coord
+            )
+            currentLocations.append(location)
+        }
+
+        return currentLocations
     }
 }
 

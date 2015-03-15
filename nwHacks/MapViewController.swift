@@ -97,10 +97,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var updateTimer: NSTimer!
     var racerLocations: [Racer: RacerAnnotation] = [:]
     var destLocation: DestinationLocation?
-    var currentLocation: MKUserLocation?
+    var currentLocation: CLLocationCoordinate2D? {
+        didSet {
+            handleLocationUpdate()
+        }
+    }
 
     var hasUpdatedMapVisibility = false
     var arrivedAtDestination = false
+
+    let fakeUserLocation = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +124,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
         updateRacerData()
         if updateTimer == nil {
-            updateTimer = NSTimer(timeInterval: 15, target: self, selector: "updateRacerData", userInfo: nil, repeats: true)
+            updateTimer = NSTimer(timeInterval: 3, target: self, selector: "updateRacerData", userInfo: nil, repeats: true)
             NSRunLoop.mainRunLoop().addTimer(updateTimer, forMode: NSDefaultRunLoopMode)
         }
     }
@@ -141,8 +147,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
 
     func showUserLocation() {
-        mapView.showsUserLocation = true
-        mapView.setUserTrackingMode(.None, animated: false)
+        if !fakeUserLocation {
+            locationManager.delegate = self
+            locationManager.startUpdatingLocation()
+        }
+//        mapView.showsUserLocation = true
+//        mapView.setUserTrackingMode(.None, animated: false)
     }
 
     dynamic func updateRacerData() {
@@ -186,6 +196,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             if isLocationAtDestination(loc.location) {
                 // TODO: Handle other user arriving at destination
             }
+
+            if loc.racer.userID == "currentUser" {
+                currentLocation = loc.location
+            }
         }
         updateMapVisibility()
     }
@@ -202,6 +216,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.addAnnotation(annotation)
         destLocation = dest
     }
+
+    func handleLocationUpdate() {
+        updateMapVisibility()
+        DataController.sharedController.pushLocation(currentLocation!)
+        if isLocationAtDestination(currentLocation!) {
+            currentUserArrivedAtDestination()
+        }
+    }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedAlways {
@@ -209,17 +231,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
 
-    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
-        currentLocation = userLocation
-        updateMapVisibility()
-
-        let userCoords = userLocation.location.coordinate
-        DataController.sharedController.pushLocation(userCoords)
-
-        if isLocationAtDestination(userCoords) {
-            currentUserArrivedAtDestination()
-        }
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        currentLocation = (locations as? [CLLocation])?.first?.coordinate
     }
+
+//    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+//        currentLocation = userLocation.location.coordinate
+//        handleLocationUpdate()
+//    }
 
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if (annotation is RacerAnnotation) {
@@ -230,6 +249,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             } else {
                 annotationView = RacerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView.annotationColor = UIColor(red: 0.7, green: 0, blue: 0, alpha: 1)
+                if (annotation as RacerAnnotation).racerLocation.racer.userID == "currentUser" {
+                    annotationView.annotationColor = UIColor.blueColor()
+                }
             }
             return annotationView
         }

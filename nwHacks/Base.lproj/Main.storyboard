@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -122,16 +122,16 @@
             </objects>
             <point key="canvasLocation" x="507" y="196"/>
         </scene>
-        <!--Leaderboard View Controller-->
+        <!--Leaderboard-->
         <scene sceneID="3rF-fP-4qr">
             <objects>
-                <tableViewController id="Ge5-a8-VIL" customClass="LeaderboardViewController" customModule="nwHacks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Leaderboard" id="Ge5-a8-VIL" customClass="LeaderboardViewController" customModule="nwHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="121" sectionHeaderHeight="22" sectionFooterHeight="22" id="c1W-Jw-Sil">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="qZx-me-BIL" customClass="LeaderboardCell" customModule="nwHacks" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaderboardCell" rowHeight="121" id="qZx-me-BIL" customClass="LeaderboardCell" customModule="nwHacks" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qZx-me-BIL" id="hP9-QR-pKI">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -174,6 +174,7 @@
                             <outlet property="delegate" destination="Ge5-a8-VIL" id="9nO-1U-0qy"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42C-g3-wg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
