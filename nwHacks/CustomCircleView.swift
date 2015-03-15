@@ -20,12 +20,12 @@ class CustomCircleView: UIView {
         setup(UIColor.greenColor(), radius: 6)
     }
     
-    func setup(color: UIColor, radius: CGFloat) {
+    func setup(color: UIColor, radius: CGFloat) -> UIView {
         let circle = UIView(frame: CGRect(x: 0, y: 0, width: 2 * radius, height: 2 * radius))
         circle.backgroundColor = color
         circle.layer.cornerRadius = radius
         circle.layer.masksToBounds = true
         
-        // return circle
+        return circle
     }
 }
