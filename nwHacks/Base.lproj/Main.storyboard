@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSc-yP-gUR" customClass="CustomCircularButton" customModule="nwHacks" customModuleProvider="target">
-                                <rect key="frame" x="219" y="217" width="163.5" height="163.5"/>
+                                <rect key="frame" x="219" y="217" width="164" height="164"/>
                                 <color key="backgroundColor" red="0.28235294119999998" green="0.71764705880000002" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="163.5" id="PhL-YR-7mq"/>
@@ -34,12 +34,35 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SZ-EZ-rDH" customClass="FBLoginView">
+                                <rect key="frame" x="219" y="429" width="164" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FlashMeet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-LW-WBH">
+                                <rect key="frame" x="150" y="116" width="301" height="74"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="60"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="bRg-dV-DSU" firstAttribute="top" secondItem="0SZ-EZ-rDH" secondAttribute="bottom" constant="113" id="69u-Ue-KUU"/>
+                            <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="p0X-dt-fat" secondAttribute="top" constant="429" id="QfC-mE-Pwq"/>
+                            <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="JSc-yP-gUR" secondAttribute="bottom" constant="48" id="X6O-5X-y1L"/>
+                            <constraint firstItem="0SZ-EZ-rDH" firstAttribute="leading" secondItem="JSc-yP-gUR" secondAttribute="leading" id="aeF-yd-VsV"/>
                             <constraint firstAttribute="centerY" secondItem="JSc-yP-gUR" secondAttribute="centerY" id="gDa-xK-suk"/>
                             <constraint firstAttribute="centerX" secondItem="JSc-yP-gUR" secondAttribute="centerX" id="nzJ-h0-vvk"/>
+                            <constraint firstAttribute="centerX" secondItem="0SZ-EZ-rDH" secondAttribute="centerX" id="tRQ-MC-YtI"/>
+                            <constraint firstItem="0SZ-EZ-rDH" firstAttribute="trailing" secondItem="JSc-yP-gUR" secondAttribute="trailing" id="yry-af-WeA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QfC-mE-Pwq"/>
+                                <exclude reference="aeF-yd-VsV"/>
+                                <exclude reference="yry-af-WeA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="startButton" destination="JSc-yP-gUR" id="Xug-JJ-os0"/>
@@ -80,6 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="507" y="196"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="x2f-2b-HBN">
@@ -108,6 +132,18 @@
                                     <constraint firstAttribute="height" constant="300" id="n4T-dx-3cO"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR RACE BEGINS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49O-Op-qti">
+                                <rect key="frame" x="217" y="28" width="167" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-iL-ykn">
+                                <rect key="frame" x="280" y="57" width="41" height="32"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

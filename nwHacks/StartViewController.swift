@@ -18,6 +18,9 @@ class StartViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         startButton.addTarget(self, action: "startButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        let loginView = FBLoginView()
+        // Align the button in the center horizontally
     }
 
     dynamic func startButtonPressed(sender: UIButton) {

@@ -8,4 +8,5 @@
 
 #import <UAProgressView/UAProgressView.h>
 #import <Firebase/Firebase.h>
+#import <FacebookSDK/FacebookSDK.h>
 

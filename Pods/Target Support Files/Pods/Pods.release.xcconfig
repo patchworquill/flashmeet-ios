@@ -1,7 +1,7 @@
 FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/Firebase"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Firebase" "${PODS_ROOT}/Headers/Public/SVPulsingAnnotationView" "${PODS_ROOT}/Headers/Public/UAProgressView"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Firebase" -isystem "${PODS_ROOT}/Headers/Public/SVPulsingAnnotationView" -isystem "${PODS_ROOT}/Headers/Public/UAProgressView"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-SVPulsingAnnotationView" -l"Pods-UAProgressView" -l"c++" -l"icucore" -framework "CFNetwork" -framework "Firebase" -framework "MapKit" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FacebookSDK" "${PODS_ROOT}/Headers/Public/Firebase" "${PODS_ROOT}/Headers/Public/SVPulsingAnnotationView" "${PODS_ROOT}/Headers/Public/UAProgressView"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Bolts" -isystem "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK" -isystem "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FacebookSDK" -isystem "${PODS_ROOT}/Headers/Public/Firebase" -isystem "${PODS_ROOT}/Headers/Public/SVPulsingAnnotationView" -isystem "${PODS_ROOT}/Headers/Public/UAProgressView"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Bolts" -l"Pods-Facebook-iOS-SDK" -l"Pods-SVPulsingAnnotationView" -l"Pods-UAProgressView" -l"c++" -l"icucore" -framework "CFNetwork" -framework "Firebase" -framework "MapKit" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -weak_framework "Accounts" -weak_framework "AudioToolbox" -weak_framework "CoreGraphics" -weak_framework "CoreLocation" -weak_framework "Foundation" -weak_framework "QuartzCore" -weak_framework "Security" -weak_framework "Social" -weak_framework "UIKit"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

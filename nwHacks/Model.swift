@@ -53,7 +53,7 @@ class DataController {
         return sharedInstance
     }
     
-    var userID = "abcd"
+    var userID = "abcd" //TODO: facebook ID key
 
     func pushLocation(location: CLLocationCoordinate2D) {
         let locationDict = [
@@ -62,7 +62,7 @@ class DataController {
             "long": location.longitude
         ]
         
-        usersRef.childByAppendingPath("alanisawesome").setValue(locationDict)
+        usersRef.childByAppendingPath("alanisawesome").setValue(locationDict) //TODO: append to CORRECT user.
         
     }
 

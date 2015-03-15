@@ -1,6 +1,6 @@
 #include "Pods-SVPulsingAnnotationView.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/SVPulsingAnnotationView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Firebase" "${PODS_ROOT}/Headers/Public/SVPulsingAnnotationView" "${PODS_ROOT}/Headers/Public/UAProgressView"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/SVPulsingAnnotationView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FacebookSDK" "${PODS_ROOT}/Headers/Public/Firebase" "${PODS_ROOT}/Headers/Public/SVPulsingAnnotationView" "${PODS_ROOT}/Headers/Public/UAProgressView"
 OTHER_LDFLAGS = ${PODS_SVPULSINGANNOTATIONVIEW_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}
 SKIP_INSTALL = YES
