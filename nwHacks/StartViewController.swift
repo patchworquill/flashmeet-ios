@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+class StartViewController: UIViewController, FBLoginViewDelegate {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var startButton: UIButton!
@@ -20,10 +20,14 @@ class StartViewController: UIViewController {
         startButton.addTarget(self, action: "startButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         
         let loginView = FBLoginView()
-        // Align the button in the center horizontally
+        loginView.delegate = self
     }
 
     dynamic func startButtonPressed(sender: UIButton) {
         performSegueWithIdentifier("showTimer", sender: self)
+    }
+
+    func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
+        DataController.sharedController.user = CurrentUser(userID: user.objectID, name: user.name)
     }
 }

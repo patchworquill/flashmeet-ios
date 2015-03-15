@@ -12,7 +12,6 @@ import CoreLocation
 struct Racer: Equatable, Hashable {
     var userID: String
     var name: String
-    var profilePhoto: UIImage?
 
     var hashValue: Int {
         return userID.hashValue
@@ -47,17 +46,36 @@ func ==(lhs: Racer, rhs: Racer) -> Bool {
     return (lhs.userID == rhs.userID)
 }
 
+struct CurrentUser {
+    var userID: String
+    var name: String
+}
+
 private let sharedInstance = DataController()
 class DataController {
     class var sharedController: DataController {
         return sharedInstance
     }
     
-    var userID = "abcd" //TODO: facebook ID key
+    var user: CurrentUser? {
+        didSet {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setValue(user?.userID, forKey: "userID")
+            defaults.setValue(user?.name, forKey: "userName")
+        }
+    }
+
+    init() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let userID = defaults.valueForKey("userID") as? String {
+            let name = defaults.valueForKey("userName") as String
+            user = CurrentUser(userID: userID, name: name)
+        }
+    }
 
     func pushLocation(location: CLLocationCoordinate2D) {
         let locationDict = [
-            "userID": userID,
+            "userID": user!.userID,
             "lat": location.latitude,
             "long": location.longitude
         ]
@@ -80,8 +98,7 @@ class DataController {
         return [
             RacerLocation(
                 racer: Racer(userID: "abcd",
-                                name: "John Smith",
-                        profilePhoto: nil),
+                                name: "John Smith"),
                 location: ubc.shiftBy(offset, offset)
             )
         ]
