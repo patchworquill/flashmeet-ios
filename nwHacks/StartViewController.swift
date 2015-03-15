@@ -12,15 +12,18 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var startButton: UIButton!
+    @IBOutlet var loginButton: FBLoginView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         startButton.addTarget(self, action: "startButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        let loginView = FBLoginView()
-        loginView.delegate = self
+
+        loginButton.delegate = self
+
+        let loggedIn = DataController.sharedController.isLoggedIn
+        loginButton.hidden = loggedIn
+        startButton.hidden = !loggedIn
     }
 
     dynamic func startButtonPressed(sender: UIButton) {

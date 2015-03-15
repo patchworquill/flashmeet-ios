@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSc-yP-gUR" customClass="CustomCircularButton" customModule="nwHacks" customModuleProvider="target">
-                                <rect key="frame" x="219" y="217" width="164" height="164"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSc-yP-gUR" customClass="CustomCircularButton" customModule="nwHacks" customModuleProvider="target">
+                                <rect key="frame" x="218" y="218" width="164" height="164"/>
                                 <color key="backgroundColor" red="0.28235294119999998" green="0.71764705880000002" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="163.5" id="PhL-YR-7mq"/>
@@ -35,11 +35,11 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SZ-EZ-rDH" customClass="FBLoginView">
-                                <rect key="frame" x="219" y="429" width="164" height="58"/>
+                                <rect key="frame" x="172" y="359" width="257" height="91"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FlashMeet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-LW-WBH">
-                                <rect key="frame" x="150" y="105" width="301" height="74"/>
+                                <rect key="frame" x="150" y="106" width="301" height="74"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="60"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -48,9 +48,12 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bRg-dV-DSU" firstAttribute="top" secondItem="0SZ-EZ-rDH" secondAttribute="bottom" constant="113" id="69u-Ue-KUU"/>
-                            <constraint firstItem="nhj-LW-WBH" firstAttribute="top" secondItem="n2t-yP-KtY" secondAttribute="bottom" constant="85" id="Gik-F8-eAC"/>
+                            <constraint firstItem="nhj-LW-WBH" firstAttribute="top" secondItem="n2t-yP-KtY" secondAttribute="bottom" constant="86" id="Gik-F8-eAC"/>
+                            <constraint firstItem="bRg-dV-DSU" firstAttribute="top" secondItem="0SZ-EZ-rDH" secondAttribute="bottom" constant="150" id="IAi-hQ-aoj"/>
+                            <constraint firstItem="bRg-dV-DSU" firstAttribute="top" secondItem="0SZ-EZ-rDH" secondAttribute="bottom" constant="120" id="LYW-rr-tUk"/>
                             <constraint firstItem="JSc-yP-gUR" firstAttribute="top" secondItem="nhj-LW-WBH" secondAttribute="bottom" constant="38" id="Pt2-Jp-y9p"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="p0X-dt-fat" secondAttribute="top" constant="429" id="QfC-mE-Pwq"/>
+                            <constraint firstAttribute="centerY" secondItem="0SZ-EZ-rDH" secondAttribute="centerY" id="Ths-jd-SFC"/>
                             <constraint firstAttribute="centerX" secondItem="nhj-LW-WBH" secondAttribute="centerX" id="WGy-Tc-cSI"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="top" secondItem="JSc-yP-gUR" secondAttribute="bottom" constant="48" id="X6O-5X-y1L"/>
                             <constraint firstItem="0SZ-EZ-rDH" firstAttribute="leading" secondItem="JSc-yP-gUR" secondAttribute="leading" id="aeF-yd-VsV"/>
@@ -62,12 +65,17 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="QfC-mE-Pwq"/>
+                                <exclude reference="Ths-jd-SFC"/>
+                                <exclude reference="X6O-5X-y1L"/>
                                 <exclude reference="aeF-yd-VsV"/>
                                 <exclude reference="yry-af-WeA"/>
+                                <exclude reference="69u-Ue-KUU"/>
+                                <exclude reference="LYW-rr-tUk"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="0SZ-EZ-rDH" id="hDk-97-urS"/>
                         <outlet property="startButton" destination="JSc-yP-gUR" id="Xug-JJ-os0"/>
                         <segue destination="Bbc-fF-fs4" kind="showDetail" identifier="showTimer" id="zWg-gs-ude"/>
                     </connections>

@@ -56,6 +56,8 @@ class DataController {
     class var sharedController: DataController {
         return sharedInstance
     }
+
+    private var fakeLogin = true
     
     var user: CurrentUser? {
         didSet {
@@ -65,11 +67,19 @@ class DataController {
         }
     }
 
+    var isLoggedIn: Bool {
+        return user != nil
+    }
+
     init() {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let userID = defaults.valueForKey("userID") as? String {
             let name = defaults.valueForKey("userName") as String
             user = CurrentUser(userID: userID, name: name)
+        }
+
+        if user == nil && fakeLogin {
+            user = CurrentUser(userID: "abcd", name: "Joe Schmo")
         }
     }
 
