@@ -20,7 +20,10 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
         startButton.addTarget(self, action: "startButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
 
         loginButton.delegate = self
+        updateLoginState()
+    }
 
+    func updateLoginState() {
         let loggedIn = DataController.sharedController.isLoggedIn
         loginButton.hidden = loggedIn
         startButton.hidden = !loggedIn
@@ -32,5 +35,6 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
 
     func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
         DataController.sharedController.user = CurrentUser(userID: user.objectID, name: user.name)
+        updateLoginState()
     }
 }
