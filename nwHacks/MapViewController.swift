@@ -134,6 +134,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     func showUserLocation() {
         mapView.showsUserLocation = true
+        mapView.setUserTrackingMode(.None, animated: false)
     }
 
     dynamic func updateRacerData() {

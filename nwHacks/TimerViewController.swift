@@ -9,9 +9,12 @@
 import UIKit
 import QuartzCore
 
+let brightGreenColor = UIColor(red: (50 / 255), green: (200 / 255), blue: (50 / 255), alpha: 1)
+
 class TimerViewController: UIViewController {
     @IBOutlet var progressView: UAProgressView!
     @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var doneLabel: UILabel!
 
     var fireDate = NSDate(timeIntervalSinceNow: 5)
     let startDate = NSDate()
@@ -31,6 +34,11 @@ class TimerViewController: UIViewController {
         displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
     }
 
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        displayLink?.paused = true
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,10 +54,31 @@ class TimerViewController: UIViewController {
         let progress = -startDate.timeIntervalSinceNow / fireDate.timeIntervalSinceDate(startDate)
         progressView.progress = Float(progress)
 
-        let timePastExpired = fireDate.timeIntervalSinceNow < -2
+        let timePastExpired = fireDate.timeIntervalSinceNow <= 0
         if timePastExpired {
-            performSegueWithIdentifier("showMapView", sender: self)
-            displayLink.paused = true
+            timerExpired()
+        }
+    }
+
+    func timerExpired() {
+        displayLink.paused = true
+
+        doneLabel.hidden = false
+        doneLabel.alpha = 0
+
+        UIView.animateWithDuration(0.6) {
+            self.timeLabel.alpha = 0
+        }
+        after(0.25) {
+            self.progressView.tintColor = brightGreenColor
+            UIView.animateWithDuration(0.75, animations: {
+                self.doneLabel.alpha = 1
+            }, completion: { finished in
+                self.timeLabel.hidden = true
+                after(0.5) {
+                    self.performSegueWithIdentifier("showMapView", sender: self)
+                }
+            })
         }
     }
 

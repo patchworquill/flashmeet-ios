@@ -2,9 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bat-A3-Zj8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
             <string>SanFranciscoDisplay-Regular</string>
         </mutableArray>
     </customFonts>
@@ -128,45 +130,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB6-lr-h85" userLabel="Go Label">
+                                <rect key="frame" x="215" y="262" width="171.5" height="76.5"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="64"/>
+                                <color key="textColor" red="0.19607843137254902" green="0.78431372549019607" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGi-yN-yVJ" customClass="UAProgressView">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-gN-VsF">
-                                        <rect key="frame" x="51" y="118" width="198" height="63"/>
-                                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="52"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="1vt-aU-ZA1"/>
                                     <constraint firstAttribute="height" constant="300" id="n4T-dx-3cO"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="YOUR RACE BEGINS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49O-Op-qti">
-                                <rect key="frame" x="217" y="64" width="167" height="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RACE BEGINS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49O-Op-qti">
+                                <rect key="frame" x="220" y="65" width="160.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-iL-ykn">
-                                <rect key="frame" x="280" y="85" width="41" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-iL-ykn">
+                                <rect key="frame" x="291" y="90" width="19" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99:99.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-gN-VsF">
+                                <rect key="frame" x="179" y="262" width="242" height="76.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="242" id="VGA-m2-Mpl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="64"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BEA-8R-LwC" firstAttribute="top" secondItem="OIh-gN-VsF" secondAttribute="bottom" constant="259" id="2ZS-eo-8ha"/>
                             <constraint firstItem="mGi-yN-yVJ" firstAttribute="centerX" secondItem="RUX-rs-BjR" secondAttribute="centerX" id="3Zh-e1-0ui"/>
                             <constraint firstItem="49O-Op-qti" firstAttribute="top" secondItem="LtA-0P-afi" secondAttribute="bottom" constant="45" id="4gF-Dy-6Wp"/>
                             <constraint firstAttribute="centerX" secondItem="Si6-iL-ykn" secondAttribute="centerX" id="FHp-t7-FYO"/>
+                            <constraint firstItem="OIh-gN-VsF" firstAttribute="leading" secondItem="RUX-rs-BjR" secondAttribute="leadingMargin" constant="157" id="JEW-hz-bVY"/>
                             <constraint firstItem="Si6-iL-ykn" firstAttribute="top" secondItem="49O-Op-qti" secondAttribute="bottom" constant="2" id="KMG-G0-9fb"/>
                             <constraint firstAttribute="centerX" secondItem="49O-Op-qti" secondAttribute="centerX" id="KWV-tc-yhp"/>
+                            <constraint firstAttribute="centerX" secondItem="rB6-lr-h85" secondAttribute="centerX" id="OuB-zZ-gUE"/>
+                            <constraint firstAttribute="centerY" secondItem="OIh-gN-VsF" secondAttribute="centerY" id="QAM-lt-TcC"/>
                             <constraint firstItem="mGi-yN-yVJ" firstAttribute="centerY" secondItem="RUX-rs-BjR" secondAttribute="centerY" id="W2L-Ul-jDn"/>
+                            <constraint firstItem="OIh-gN-VsF" firstAttribute="centerX" secondItem="rB6-lr-h85" secondAttribute="centerX" id="Wpj-DG-G1L"/>
+                            <constraint firstAttribute="centerX" secondItem="OIh-gN-VsF" secondAttribute="centerX" id="bfk-Nc-6M5"/>
+                            <constraint firstItem="OIh-gN-VsF" firstAttribute="centerY" secondItem="rB6-lr-h85" secondAttribute="centerY" id="dNg-s5-2br"/>
+                            <constraint firstAttribute="centerY" secondItem="rB6-lr-h85" secondAttribute="centerY" id="xw2-OU-7us"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JEW-hz-bVY"/>
+                                <exclude reference="Wpj-DG-G1L"/>
+                                <exclude reference="dNg-s5-2br"/>
+                                <exclude reference="2ZS-eo-8ha"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="doneLabel" destination="rB6-lr-h85" id="Gcn-YT-9Z5"/>
                         <outlet property="progressView" destination="mGi-yN-yVJ" id="hXA-pe-yPk"/>
                         <outlet property="timeLabel" destination="OIh-gN-VsF" id="tJp-l7-I6n"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showMapView" id="LE6-lk-dRY"/>
