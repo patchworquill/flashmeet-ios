@@ -32,7 +32,11 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
     }
 
     dynamic func startButtonPressed(sender: UIButton) {
-        performSegueWithIdentifier("showTimer", sender: self)
+        let userID = DataController.sharedController.user!.userID
+        request(.POST, "http://nwhacks.deltchev.me/api/start-race", parameters: ["userId": userID]).responseString
+        { (_, _, str, err) in
+            self.performSegueWithIdentifier("showTimer", sender: self)
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

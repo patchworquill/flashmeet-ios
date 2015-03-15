@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0339A855689D415BEDC66050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC60AF5FBEFE7ED97799B593 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		0D6F60801AB5316600311CAD /* AKCircleMaskTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F607F1AB5316600311CAD /* AKCircleMaskTransitionController.swift */; };
 		0DA32C191AB4CB230089E662 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA32C171AB4CB230089E662 /* Model.swift */; };
 		0DA32C1A1AB4CB230089E662 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA32C181AB4CB230089E662 /* Utilities.swift */; };
@@ -21,6 +20,8 @@
 		0DC516321AB41A9300441A4C /* nwHacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC516311AB41A9300441A4C /* nwHacksTests.swift */; };
 		0DDEC9221AB57D7E00154E62 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */; };
 		0DDEC9241AB58A6E00154E62 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEC9231AB58A6E00154E62 /* LeaderboardCell.swift */; };
+		0DE7C5C51AB598D900F1C770 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7C5C41AB598D900F1C770 /* Alamofire.swift */; };
+		16D9135E018DA41E1EC8E328 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBACB82F873BFA9BB49EF8F /* libPods.a */; };
 		590D8D641AB4F5F500ADB83D /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590D8D631AB4F5F500ADB83D /* FirebaseController.swift */; };
 		A522E6BD1AB57C7B00003DCC /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */; };
 		A540822D1AB4BDCE0037864C /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A54082251AB4BDCE0037864C /* SanFranciscoDisplay-Bold.otf */; };
@@ -64,7 +65,9 @@
 		0DC516311AB41A9300441A4C /* nwHacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwHacksTests.swift; sourceTree = "<group>"; };
 		0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		0DDEC9231AB58A6E00154E62 /* LeaderboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
+		0DE7C5C41AB598D900F1C770 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		590D8D631AB4F5F500ADB83D /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		6EBACB82F873BFA9BB49EF8F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		A54082251AB4BDCE0037864C /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
 		A54082261AB4BDCE0037864C /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 		A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircularButton.swift; sourceTree = "<group>"; };
 		B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		FC60AF5FBEFE7ED97799B593 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0339A855689D415BEDC66050 /* Pods.framework in Frameworks */,
+				16D9135E018DA41E1EC8E328 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +104,7 @@
 		015C6B6EDACC47F48EE48355 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FC60AF5FBEFE7ED97799B593 /* Pods.framework */,
+				6EBACB82F873BFA9BB49EF8F /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +115,7 @@
 				0DA32C181AB4CB230089E662 /* Utilities.swift */,
 				0DA32C171AB4CB230089E662 /* Model.swift */,
 				590D8D631AB4F5F500ADB83D /* FirebaseController.swift */,
+				0DE7C5C41AB598D900F1C770 /* Alamofire.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -238,7 +241,6 @@
 				0DC516131AB41A9300441A4C /* Frameworks */,
 				0DC516141AB41A9300441A4C /* Resources */,
 				B8361A0C3CEB4BEC80F8BFF4 /* Copy Pods Resources */,
-				4B7260D0BC64C9A70A013C86 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,21 +337,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B7260D0BC64C9A70A013C86 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B8361A0C3CEB4BEC80F8BFF4 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +377,7 @@
 				590D8D641AB4F5F500ADB83D /* FirebaseController.swift in Sources */,
 				0DDEC9241AB58A6E00154E62 /* LeaderboardCell.swift in Sources */,
 				0D6F60801AB5316600311CAD /* AKCircleMaskTransitionController.swift in Sources */,
+				0DE7C5C51AB598D900F1C770 /* Alamofire.swift in Sources */,
 				0DDEC9221AB57D7E00154E62 /* LeaderboardViewController.swift in Sources */,
 				0DB360511AB4604E001BD5B6 /* TimerViewController.swift in Sources */,
 				0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */,

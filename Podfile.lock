@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (1.1.4)
   - Bolts (1.1.4)
   - Facebook-iOS-SDK (3.23.1):
     - Bolts (~> 1.0)
@@ -8,14 +7,12 @@ PODS:
   - UAProgressView (0.1.1)
 
 DEPENDENCIES:
-  - AlamoFire
   - Facebook-iOS-SDK
   - Firebase (>= 2.2.0)
   - SVPulsingAnnotationView
   - UAProgressView
 
 SPEC CHECKSUMS:
-  Alamofire: 524225da382071ee3e6d0badd0ee4b4dc36740de
   Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
   Facebook-iOS-SDK: 89dae50e975ebab95a01b0962d27277fc9cf08fd
   Firebase: e7a2ea2ffeff99f9c37028b354194dcc9718d36b
