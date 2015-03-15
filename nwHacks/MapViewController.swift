@@ -96,6 +96,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     var updateTimer: NSTimer!
     var racerLocations: [Racer: RacerAnnotation] = [:]
+    var destLocation: DestinationLocation?
     var currentLocation: MKUserLocation?
     var hasUpdatedMapVisibility = false
 
@@ -108,6 +109,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+
+        DataController.sharedController.fetchRaceInfo("1") { destLocation in
+            self.updateDestination(destLocation)
+        }
+
         updateRacerData()
         if updateTimer == nil {
             updateTimer = NSTimer(timeInterval: 15, target: self, selector: "updateRacerData", userInfo: nil, repeats: true)
@@ -166,6 +172,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let annotation = MKPointAnnotation()
         annotation.coordinate = dest.location
         mapView.addAnnotation(annotation)
+        destLocation = dest
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -176,20 +183,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
         currentLocation = userLocation
-        DataController.sharedController.raceListener("2")
-        DataController.sharedController.pushLocation(userLocation.location.coordinate)
-        DataController.sharedController.pullDestination("0")
-        
-        
         updateMapVisibility()
-        
-        let camera = MKMapCamera()
-        camera.centerCoordinate = userLocation.location.coordinate
-        camera.heading = 0
-        camera.pitch = 80
-        camera.altitude = 100
-        
-        mapView.setCamera(camera, animated: true)
+
+        DataController.sharedController.pushLocation(userLocation.location.coordinate)
     }
 
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {

@@ -29,6 +29,7 @@ struct RacerLocation {
 }
 
 struct DestinationLocation {
+    var destID: Int
     var name: String
     var adress: String
     var description: String
@@ -97,29 +98,46 @@ class DataController {
         ]
         usersRef.childByAppendingPath(user!.userID).setValue(locationDict)
     }
-    
-    func raceListener(raceID: String) {
+
+    func fetchRaceInfo(raceID: String, completion: (DestinationLocation) -> ()) {
         var thisRaceRef = Firebase(url:"https://nwhacks.firebaseio.com/races/\(raceID)")
-        
-        thisRaceRef.observeEventType(.ChildChanged, withBlock: { snapshot in
-            let destID = snapshot.value as String //Force cast as string
-            self.pullDestination(destID)
+
+        thisRaceRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            func getDestID(snapshot: FDataSnapshot) -> Int? {
+                if let dict = snapshot.value as? NSDictionary {
+                    return (dict["destination"] as Int)
+                } else {
+                    return nil
+                }
+            }
+            
+            // No if-let because Swift bugs :(
+            let destID = getDestID(snapshot)
+            if destID != nil {
+                self.fetchDestinationInfo(destID!, completion)
+            } else {
+                // Wait until a change occurs if no value is available
+                thisRaceRef.observeSingleEventOfType(.ChildChanged, withBlock: { snapshot in
+                    let destID = getDestID(snapshot)!
+                    self.fetchDestinationInfo(destID, completion)
+                })
+            }
         })
     }
     
-    func pullDestination(destID: String) {
+    private func fetchDestinationInfo(destID: Int, completion: (DestinationLocation) -> ()) {
         var destRef = Firebase(url:"https://nwhacks.firebaseio.com/destinations/\(destID)")
         
-        destRef.observeEventType(.Value, withBlock: { snapshot in
-            var destDict = snapshot.value as [String: AnyObject]
+        destRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            var destDict = snapshot.value as NSDictionary
             var destName = destDict["name"] as String
             var destAddress = destDict["address"] as String
             var destDisc = destDict["description"] as String
             var destLat = destDict["lat"] as Double
             var destLong = destDict["long"] as Double
             var destCoords = CLLocationCoordinate2D(latitude: destLat, longitude: destLong)
-            var finalDest = DestinationLocation(name: destName, adress: destAddress, description: destDisc, location: destCoords)
-            println("\(finalDest)")
+            var finalDest = DestinationLocation(destID: destID, name: destName, adress: destAddress, description: destDisc, location: destCoords)
+            completion(finalDest)
         })
     }
 

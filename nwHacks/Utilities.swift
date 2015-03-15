@@ -26,3 +26,11 @@ extension CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitude + dlat, longitude: longitude + dlon)
     }
 }
+
+class Box<T> {
+    var value: T
+
+    init(_ value: T) {
+        self.value = value
+    }
+}
