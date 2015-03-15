@@ -117,17 +117,17 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="g9V-j3-SRq" id="XOl-Yc-Qkg"/>
-                        <segue destination="Ge5-a8-VIL" kind="showDetail" identifier="showLeaderboard" id="Gai-Od-9Iz"/>
+                        <segue destination="Kd4-gR-d8E" kind="showDetail" identifier="showLeaderboard" id="45F-FL-Ppl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="507" y="196"/>
         </scene>
-        <!--Leaderboard View Controller-->
+        <!--Leaderboard-->
         <scene sceneID="3rF-fP-4qr">
             <objects>
-                <tableViewController id="Ge5-a8-VIL" customClass="LeaderboardViewController" customModule="nwHacks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Leaderboard" id="Ge5-a8-VIL" customClass="LeaderboardViewController" customModule="nwHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="121" sectionHeaderHeight="22" sectionFooterHeight="22" id="c1W-Jw-Sil">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,10 +176,27 @@
                             <outlet property="delegate" destination="Ge5-a8-VIL" id="9nO-1U-0qy"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Leaderboard" id="tk7-R8-8Kg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42C-g3-wg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1334" y="-165"/>
+            <point key="canvasLocation" x="1600" y="167"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="OCd-c6-pjG">
+            <objects>
+                <navigationController title="Leaderboard" id="Kd4-gR-d8E" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xGJ-r4-kGA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ge5-a8-VIL" kind="relationship" relationship="rootViewController" id="lzg-jJ-yqZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqH-EF-5rY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218" y="-581"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="x2f-2b-HBN">
