@@ -85,12 +85,11 @@ class DataController {
 
     func pushLocation(location: CLLocationCoordinate2D) {
         let locationDict = [
-            "userID": user!.userID,
             "lat": location.latitude,
             "long": location.longitude
         ]
         
-        usersRef.childByAppendingPath("alanisawesome").setValue(locationDict) //TODO: append to CORRECT user.
+        usersRef.childByAppendingPath(user!.userID).setValue(locationDict)
         
     }
 
