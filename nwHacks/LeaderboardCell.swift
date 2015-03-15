@@ -9,6 +9,7 @@
 import UIKit
 
 class LeaderboardCell: UITableViewCell {
+    
     @IBOutlet var profileView: FBProfilePictureView!
     @IBOutlet var nameLabel: UILabel!
 

@@ -13,15 +13,11 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var startButton: UIButton!
     @IBOutlet var loginButton: FBLoginView!
-
     lazy var transitionController = AKCircleMaskTransitionController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        startButton.addTarget(self, action: "startButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        loginButton.readPermissions = ["public_profile", "user_friends"]
-        loginButton.delegate = self
+        setupUserInterface()
         updateLoginState()
     }
 
@@ -29,23 +25,6 @@ class StartViewController: UIViewController, FBLoginViewDelegate {
         let loggedIn = DataController.sharedController.isLoggedIn
         loginButton.hidden = loggedIn
         startButton.hidden = !loggedIn
-    }
-
-    dynamic func startButtonPressed(sender: UIButton) {
-//        let userID = DataController.sharedController.user!.userID
-//        request(.POST, "http://nwhacks.deltchev.me/api/start-race", parameters: ["userId": userID]).responseString
-//        { (_, _, str, err) in
-            self.performSegueWithIdentifier("showTimer", sender: self)
-//        }
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        super.prepareForSegue(segue, sender: sender)
-
-        transitionController.center = startButton.center
-        let destVC = segue.destinationViewController as UIViewController
-        destVC.transitioningDelegate = transitionController
-        destVC.modalPresentationStyle = .Custom
     }
 
     func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {

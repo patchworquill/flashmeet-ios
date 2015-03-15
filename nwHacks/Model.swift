@@ -137,16 +137,6 @@ class DataController {
 
             let session = RaceSession(raceID: self.raceID!, initiatorID: initiator, participantIDs: participantIDs, participantStartDates: startDates, destinationID: destID)
             self.fetchDestinationInfo(destID, completion: completion)
-
-//            if destID != nil {
-//                self.fetchDestinationInfo(destID!, completion)
-//            } else {
-//                // Wait until a change occurs if no value is available
-//                thisRaceRef.observeSingleEventOfType(.ChildChanged, withBlock: { snapshot in
-//                    let destID = getDestID(snapshot)!
-//                    self.fetchDestinationInfo(destID, completion)
-//                })
-//            }
         })
     }
     

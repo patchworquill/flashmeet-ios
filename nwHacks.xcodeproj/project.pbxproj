@@ -33,6 +33,14 @@
 		A54082331AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A540822B1AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf */; };
 		A54082341AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A540822C1AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf */; };
 		A5600D2D1AB44FC700DC5E78 /* CustomCircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */; };
+		A573CC1D1AB5BF6900C2D812 /* RacerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A573CC1C1AB5BF6900C2D812 /* RacerAnnotationView.swift */; };
+		A573CC1F1AB5BFB300C2D812 /* RacerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A573CC1E1AB5BFB300C2D812 /* RacerAnnotation.swift */; };
+		A573CC221AB5C18600C2D812 /* LeaderboardEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A573CC211AB5C18600C2D812 /* LeaderboardEntry.swift */; };
+		A573CC281AB5C47C00C2D812 /* MapViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A573CC271AB5C47C00C2D812 /* MapViewDelegates.swift */; };
+		A57F9C231AB5BDAC009F9E1A /* LeaderboardViewUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57F9C221AB5BDAC009F9E1A /* LeaderboardViewUIHelper.swift */; };
+		A57F9C251AB5BDB5009F9E1A /* TimerViewUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57F9C241AB5BDB5009F9E1A /* TimerViewUIHelper.swift */; };
+		A57F9C271AB5BDBA009F9E1A /* MapViewUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57F9C261AB5BDBA009F9E1A /* MapViewUIHelper.swift */; };
+		A57F9C291AB5BDC0009F9E1A /* StartViewUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57F9C281AB5BDC0009F9E1A /* StartViewUIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +86,14 @@
 		A540822B1AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
 		A540822C1AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
 		A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircularButton.swift; sourceTree = "<group>"; };
+		A573CC1C1AB5BF6900C2D812 /* RacerAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacerAnnotationView.swift; sourceTree = "<group>"; };
+		A573CC1E1AB5BFB300C2D812 /* RacerAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacerAnnotation.swift; sourceTree = "<group>"; };
+		A573CC211AB5C18600C2D812 /* LeaderboardEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardEntry.swift; sourceTree = "<group>"; };
+		A573CC271AB5C47C00C2D812 /* MapViewDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewDelegates.swift; sourceTree = "<group>"; };
+		A57F9C221AB5BDAC009F9E1A /* LeaderboardViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewUIHelper.swift; sourceTree = "<group>"; };
+		A57F9C241AB5BDB5009F9E1A /* TimerViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewUIHelper.swift; sourceTree = "<group>"; };
+		A57F9C261AB5BDBA009F9E1A /* MapViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewUIHelper.swift; sourceTree = "<group>"; };
+		A57F9C281AB5BDC0009F9E1A /* StartViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewUIHelper.swift; sourceTree = "<group>"; };
 		B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,8 +159,11 @@
 		0DC516181AB41A9300441A4C /* nwHacks */ = {
 			isa = PBXGroup;
 			children = (
+				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
+				A57F9C211AB5BD96009F9E1A /* Vendor */,
 				0DA32C161AB4CB0A0089E662 /* Model */,
 				A5600D2E1AB4549400DC5E78 /* View */,
+				A57F9C201AB5BD2C009F9E1A /* Helper */,
 				A5600D2F1AB4549900DC5E78 /* Controller */,
 				0DC5161F1AB41A9300441A4C /* Main.storyboard */,
 				0DC516221AB41A9300441A4C /* Images.xcassets */,
@@ -201,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				0DDEC9231AB58A6E00154E62 /* LeaderboardCell.swift */,
-				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
 				A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */,
 				A522E6BC1AB57C7B00003DCC /* CustomCircleView.swift */,
 			);
@@ -211,13 +229,67 @@
 		A5600D2F1AB4549900DC5E78 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A573CC291AB5C54500C2D812 /* Helper */,
 				0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */,
-				0D6F607F1AB5316600311CAD /* AKCircleMaskTransitionController.swift */,
 				0DB360501AB4604E001BD5B6 /* TimerViewController.swift */,
 				0DC5161D1AB41A9300441A4C /* MapViewController.swift */,
 				0DB95E9F1AB439CE00074827 /* StartViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		A573CC251AB5C42400C2D812 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A57F9C221AB5BDAC009F9E1A /* LeaderboardViewUIHelper.swift */,
+				A57F9C241AB5BDB5009F9E1A /* TimerViewUIHelper.swift */,
+				A57F9C261AB5BDBA009F9E1A /* MapViewUIHelper.swift */,
+				A57F9C281AB5BDC0009F9E1A /* StartViewUIHelper.swift */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		A573CC261AB5C46800C2D812 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A573CC271AB5C47C00C2D812 /* MapViewDelegates.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		A573CC291AB5C54500C2D812 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A573CC211AB5C18600C2D812 /* LeaderboardEntry.swift */,
+				A5C627881AB5C5CA0044BD85 /* Annotation */,
+				A573CC261AB5C46800C2D812 /* Delegates */,
+				A573CC251AB5C42400C2D812 /* User Interface */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		A57F9C201AB5BD2C009F9E1A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		A57F9C211AB5BD96009F9E1A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				0D6F607F1AB5316600311CAD /* AKCircleMaskTransitionController.swift */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		A5C627881AB5C5CA0044BD85 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				A573CC1C1AB5BF6900C2D812 /* RacerAnnotationView.swift */,
+				A573CC1E1AB5BFB300C2D812 /* RacerAnnotation.swift */,
+			);
+			name = Annotation;
 			sourceTree = "<group>";
 		};
 		FBB8C03001A9EADABBE0D620 /* Pods */ = {
@@ -375,17 +447,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				590D8D641AB4F5F500ADB83D /* FirebaseController.swift in Sources */,
+				A573CC281AB5C47C00C2D812 /* MapViewDelegates.swift in Sources */,
 				0DDEC9241AB58A6E00154E62 /* LeaderboardCell.swift in Sources */,
+				A57F9C251AB5BDB5009F9E1A /* TimerViewUIHelper.swift in Sources */,
 				0D6F60801AB5316600311CAD /* AKCircleMaskTransitionController.swift in Sources */,
 				0DE7C5C51AB598D900F1C770 /* Alamofire.swift in Sources */,
 				0DDEC9221AB57D7E00154E62 /* LeaderboardViewController.swift in Sources */,
 				0DB360511AB4604E001BD5B6 /* TimerViewController.swift in Sources */,
+				A573CC1F1AB5BFB300C2D812 /* RacerAnnotation.swift in Sources */,
+				A57F9C271AB5BDBA009F9E1A /* MapViewUIHelper.swift in Sources */,
 				0DC5161E1AB41A9300441A4C /* MapViewController.swift in Sources */,
 				0DA32C1A1AB4CB230089E662 /* Utilities.swift in Sources */,
+				A57F9C291AB5BDC0009F9E1A /* StartViewUIHelper.swift in Sources */,
+				A573CC1D1AB5BF6900C2D812 /* RacerAnnotationView.swift in Sources */,
 				A522E6BD1AB57C7B00003DCC /* CustomCircleView.swift in Sources */,
 				A5600D2D1AB44FC700DC5E78 /* CustomCircularButton.swift in Sources */,
 				0DA32C191AB4CB230089E662 /* Model.swift in Sources */,
+				A573CC221AB5C18600C2D812 /* LeaderboardEntry.swift in Sources */,
 				0DC5161C1AB41A9300441A4C /* AppDelegate.swift in Sources */,
+				A57F9C231AB5BDAC009F9E1A /* LeaderboardViewUIHelper.swift in Sources */,
 				0DB95EA01AB439CE00074827 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
