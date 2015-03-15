@@ -36,6 +36,27 @@ class LeaderboardViewController: UITableViewController {
     var handle: UInt?
     var entries = NSMutableSet()
 
+    struct FakeUser {
+        let name: String
+        let image: UIImage? = nil
+
+        init(_ name: String, _ imageURL: String) {
+            self.name = name
+//            let imageData = NSData(contentsOfURL: NSURL(string: imageURL)!)!
+//            self.image = UIImage(data: imageData)!
+        }
+    }
+
+    let sampleUsers = [
+        FakeUser("Kanye West", ""),
+        FakeUser("Al Gore", ""),
+        FakeUser("Bill Gates", ""),
+        FakeUser("Julie Calibre", ""),
+        FakeUser("Max Planck", "")
+    ]
+
+    let fakeData = true
+
     var sortedEntries: [LeaderboardEntry] {
         return (entries.allObjects as [LeaderboardEntry]).sorted({ (lhs, rhs) -> Bool in
             return lhs.finishedDate.compare(rhs.finishedDate) == .OrderedAscending
@@ -48,6 +69,10 @@ class LeaderboardViewController: UITableViewController {
     }
 
     func observeLeaderboard() {
+        if fakeData {
+            return
+        }
+
         let raceID = DataController.sharedController.raceID!
         handle = leaderboardEndpoint(raceID).observeEventType(.Value, withBlock: { snapshot in
             let users = snapshot.value as [String: String]
@@ -65,15 +90,21 @@ class LeaderboardViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entries.count
+        return fakeData ? sampleUsers.count : entries.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LeaderboardCell", forIndexPath: indexPath) as LeaderboardCell
-        let entry = sortedEntries[indexPath.row]
 
-        cell.profileView.profileID = entry.userID
-        // TODO: Set username
+        if fakeData {
+            let user = sampleUsers[indexPath.row]
+//            cell.profileView.hidden = true
+//            cell.imageView!.image = user.image
+            cell.nameLabel.text = user.name
+        } else {
+            let entry = sortedEntries[indexPath.row]
+            cell.profileView.profileID = entry.userID
+        }
 
         return cell
     }

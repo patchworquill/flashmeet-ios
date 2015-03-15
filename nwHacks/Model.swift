@@ -201,11 +201,19 @@ class DataController {
         let startLocations = [
             "abcd": FakeUser(
                 location: CLLocationCoordinate2D(latitude: 49.255642, longitude: -123.236566),
-                speedFactor: 1.5
+                speedFactor: 2.0
             ),
             "defg": FakeUser(
                 location: CLLocationCoordinate2D(latitude: 49.263680, longitude: -123.196869),
                 speedFactor: 1.2
+            ),
+            "jkl;": FakeUser(
+                location: CLLocationCoordinate2D(latitude: 49.273033, longitude: -123.198757),
+                speedFactor: 1.5
+            ),
+            "🐶🐮": FakeUser(
+                location: CLLocationCoordinate2D(latitude: 49.234770, longitude: -123.196096),
+                speedFactor: 0.75
             ),
             "currentUser": FakeUser(
                 location: CLLocationCoordinate2D(latitude: 49.273229, longitude: -123.247080),

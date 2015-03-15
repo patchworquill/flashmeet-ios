@@ -247,8 +247,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             if let view = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? RacerAnnotationView {
                 annotationView = view
             } else {
+                func rcc() -> CGFloat {
+                    return CGFloat(arc4random_uniform(255)) / 255
+                }
+
                 annotationView = RacerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                annotationView.annotationColor = UIColor(red: 0.7, green: 0, blue: 0, alpha: 1)
+                annotationView.annotationColor = UIColor(red: rcc(), green: rcc(), blue: rcc(), alpha: 1)
                 if (annotation as RacerAnnotation).racerLocation.racer.userID == "currentUser" {
                     annotationView.annotationColor = UIColor.blueColor()
                 }
