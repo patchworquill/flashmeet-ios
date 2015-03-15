@@ -6,6 +6,12 @@
 // project.
 
 
+// AlamoFire
+#define COCOAPODS_POD_AVAILABLE_AlamoFire
+#define COCOAPODS_VERSION_MAJOR_AlamoFire 1
+#define COCOAPODS_VERSION_MINOR_AlamoFire 1
+#define COCOAPODS_VERSION_PATCH_AlamoFire 4
+
 // Bolts
 #define COCOAPODS_POD_AVAILABLE_Bolts
 #define COCOAPODS_VERSION_MAJOR_Bolts 1
