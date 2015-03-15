@@ -31,6 +31,7 @@
 		A54082321AB4BDCE0037864C /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A540822A1AB4BDCE0037864C /* SanFranciscoDisplay-Semibold.otf */; };
 		A54082331AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A540822B1AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf */; };
 		A54082341AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A540822C1AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf */; };
+		A55FA9F91AB5D493001AAD0D /* FlashMeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FA9F81AB5D493001AAD0D /* FlashMeetTests.swift */; };
 		A5600D2D1AB44FC700DC5E78 /* CustomCircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */; };
 		A573CC1D1AB5BF6900C2D812 /* RacerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A573CC1C1AB5BF6900C2D812 /* RacerAnnotationView.swift */; };
 		A573CC1F1AB5BFB300C2D812 /* RacerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A573CC1E1AB5BFB300C2D812 /* RacerAnnotation.swift */; };
@@ -43,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A55FA9FA1AB5D493001AAD0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DC5160E1AB41A9300441A4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DC516151AB41A9300441A4C;
+			remoteInfo = FlashMeet;
+		};
 		A5EB984C1AB5D313007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A5EB98441AB5D313007FAF06 /* Pods.xcodeproj */;
@@ -109,6 +117,9 @@
 		A540822A1AB4BDCE0037864C /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
 		A540822B1AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
 		A540822C1AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		A55FA9F41AB5D493001AAD0D /* FlashMeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashMeetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55FA9F71AB5D493001AAD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55FA9F81AB5D493001AAD0D /* FlashMeetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashMeetTests.swift; sourceTree = "<group>"; };
 		A5600D2C1AB44FC700DC5E78 /* CustomCircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircularButton.swift; sourceTree = "<group>"; };
 		A573CC1C1AB5BF6900C2D812 /* RacerAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacerAnnotationView.swift; sourceTree = "<group>"; };
 		A573CC1E1AB5BFB300C2D812 /* RacerAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacerAnnotation.swift; sourceTree = "<group>"; };
@@ -129,6 +140,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D9135E018DA41E1EC8E328 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55FA9F11AB5D493001AAD0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC516181AB41A9300441A4C /* FlashMeet */,
+				A55FA9F51AB5D493001AAD0D /* FlashMeetTests */,
 				0DC516171AB41A9300441A4C /* Products */,
 				015C6B6EDACC47F48EE48355 /* Frameworks */,
 			);
@@ -167,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC516161AB41A9300441A4C /* FlashMeet.app */,
+				A55FA9F41AB5D493001AAD0D /* FlashMeetTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +232,23 @@
 				A540822C1AB4BDCE0037864C /* SanFranciscoDisplay-Ultralight.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A55FA9F51AB5D493001AAD0D /* FlashMeetTests */ = {
+			isa = PBXGroup;
+			children = (
+				A55FA9F81AB5D493001AAD0D /* FlashMeetTests.swift */,
+				A55FA9F61AB5D493001AAD0D /* Supporting Files */,
+			);
+			path = FlashMeetTests;
+			sourceTree = "<group>";
+		};
+		A55FA9F61AB5D493001AAD0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A55FA9F71AB5D493001AAD0D /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A5600D2E1AB4549400DC5E78 /* View */ = {
@@ -327,6 +364,24 @@
 			productReference = 0DC516161AB41A9300441A4C /* FlashMeet.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A55FA9F31AB5D493001AAD0D /* FlashMeetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A55FAA031AB5D493001AAD0D /* Build configuration list for PBXNativeTarget "FlashMeetTests" */;
+			buildPhases = (
+				A55FA9F01AB5D493001AAD0D /* Sources */,
+				A55FA9F11AB5D493001AAD0D /* Frameworks */,
+				A55FA9F21AB5D493001AAD0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A55FA9FB1AB5D493001AAD0D /* PBXTargetDependency */,
+			);
+			name = FlashMeetTests;
+			productName = FlashMeetTests;
+			productReference = A55FA9F41AB5D493001AAD0D /* FlashMeetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -339,6 +394,10 @@
 					0DC516151AB41A9300441A4C = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 7NE79LP6VD;
+					};
+					A55FA9F31AB5D493001AAD0D = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 0DC516151AB41A9300441A4C;
 					};
 				};
 			};
@@ -362,6 +421,7 @@
 			projectRoot = "";
 			targets = (
 				0DC516151AB41A9300441A4C /* FlashMeet */,
+				A55FA9F31AB5D493001AAD0D /* FlashMeetTests */,
 			);
 		};
 /* End PBXProject section */
@@ -420,6 +480,13 @@
 				A54082331AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf in Resources */,
 				A54082301AB4BDCE0037864C /* SanFranciscoDisplay-Medium.otf in Resources */,
 				A540822F1AB4BDCE0037864C /* SanFranciscoDisplay-Light.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55FA9F21AB5D493001AAD0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +554,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A55FA9F01AB5D493001AAD0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55FA9F91AB5D493001AAD0D /* FlashMeetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A55FA9FB1AB5D493001AAD0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DC516151AB41A9300441A4C /* FlashMeet */;
+			targetProxy = A55FA9FA1AB5D493001AAD0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0DC5161F1AB41A9300441A4C /* Main.storyboard */ = {
@@ -620,6 +703,42 @@
 			};
 			name = Release;
 		};
+		A55FA9FC1AB5D493001AAD0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlashMeetTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlashMeet.app/FlashMeet";
+			};
+			name = Debug;
+		};
+		A55FA9FD1AB5D493001AAD0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlashMeetTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlashMeet.app/FlashMeet";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -640,6 +759,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A55FAA031AB5D493001AAD0D /* Build configuration list for PBXNativeTarget "FlashMeetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55FA9FC1AB5D493001AAD0D /* Debug */,
+				A55FA9FD1AB5D493001AAD0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
