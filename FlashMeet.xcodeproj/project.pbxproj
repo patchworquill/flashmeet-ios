@@ -17,7 +17,6 @@
 		0DC516211AB41A9300441A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DC5161F1AB41A9300441A4C /* Main.storyboard */; };
 		0DC516231AB41A9300441A4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC516221AB41A9300441A4C /* Images.xcassets */; };
 		0DC516261AB41A9300441A4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC516241AB41A9300441A4C /* LaunchScreen.xib */; };
-		0DC516321AB41A9300441A4C /* nwHacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC516311AB41A9300441A4C /* nwHacksTests.swift */; };
 		0DDEC9221AB57D7E00154E62 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */; };
 		0DDEC9241AB58A6E00154E62 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEC9231AB58A6E00154E62 /* LeaderboardCell.swift */; };
 		0DE7C5C51AB598D900F1C770 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7C5C41AB598D900F1C770 /* Alamofire.swift */; };
@@ -44,44 +43,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0DC5162C1AB41A9300441A4C /* PBXContainerItemProxy */ = {
+		A5EB98291AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0DC5160E1AB41A9300441A4C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0DC516151AB41A9300441A4C;
-			remoteInfo = MapKitTest;
-		};
-		A5C629591AB5CBC10044BD85 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5C629511AB5CBC10044BD85 /* Pods.xcodeproj */;
+			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5198C701A05D2DC93CF3E7A7;
 			remoteInfo = Pods;
 		};
-		A5C6295B1AB5CBC10044BD85 /* PBXContainerItemProxy */ = {
+		A5EB982B1AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5C629511AB5CBC10044BD85 /* Pods.xcodeproj */;
+			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6AF060BEE6DCD701F02BB2C4;
 			remoteInfo = "Pods-Bolts";
 		};
-		A5C6295D1AB5CBC10044BD85 /* PBXContainerItemProxy */ = {
+		A5EB982D1AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5C629511AB5CBC10044BD85 /* Pods.xcodeproj */;
+			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 17D3E56D760DA32F9E0E5629;
 			remoteInfo = "Pods-Facebook-iOS-SDK";
 		};
-		A5C6295F1AB5CBC10044BD85 /* PBXContainerItemProxy */ = {
+		A5EB982F1AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5C629511AB5CBC10044BD85 /* Pods.xcodeproj */;
+			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A76AAD8B966514C1DDDD108C;
 			remoteInfo = "Pods-SVPulsingAnnotationView";
 		};
-		A5C629611AB5CBC10044BD85 /* PBXContainerItemProxy */ = {
+		A5EB98311AB5CFFD007FAF06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5C629511AB5CBC10044BD85 /* Pods.xcodeproj */;
+			containerPortal = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 26B6771DBB2A38267243A298;
 			remoteInfo = "Pods-UAProgressView";
@@ -96,16 +88,13 @@
 		0DB360501AB4604E001BD5B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nwHacks-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DB95E9F1AB439CE00074827 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		0DC516161AB41A9300441A4C /* nwHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nwHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DC516161AB41A9300441A4C /* FlashMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC5161A1AB41A9300441A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DC5161B1AB41A9300441A4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DC5161D1AB41A9300441A4C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0DC516201AB41A9300441A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DC516221AB41A9300441A4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0DC516251AB41A9300441A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0DC5162B1AB41A9300441A4C /* nwHacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nwHacksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DC516301AB41A9300441A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DC516311AB41A9300441A4C /* nwHacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nwHacksTests.swift; sourceTree = "<group>"; };
 		0DDEC9211AB57D7E00154E62 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		0DDEC9231AB58A6E00154E62 /* LeaderboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		0DE7C5C41AB598D900F1C770 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
@@ -129,7 +118,7 @@
 		A57F9C241AB5BDB5009F9E1A /* TimerViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewUIHelper.swift; sourceTree = "<group>"; };
 		A57F9C261AB5BDBA009F9E1A /* MapViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewUIHelper.swift; sourceTree = "<group>"; };
 		A57F9C281AB5BDC0009F9E1A /* StartViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewUIHelper.swift; sourceTree = "<group>"; };
-		A5C629511AB5CBC10044BD85 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,13 +129,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				16D9135E018DA41E1EC8E328 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DC516281AB41A9300441A4C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +157,7 @@
 		0DC5160D1AB41A9300441A4C = {
 			isa = PBXGroup;
 			children = (
-				0DC516181AB41A9300441A4C /* nwHacks */,
-				0DC5162E1AB41A9300441A4C /* nwHacksTests */,
+				0DC516181AB41A9300441A4C /* FlashMeet */,
 				0DC516171AB41A9300441A4C /* Products */,
 				015C6B6EDACC47F48EE48355 /* Frameworks */,
 				FBB8C03001A9EADABBE0D620 /* Pods */,
@@ -186,13 +167,12 @@
 		0DC516171AB41A9300441A4C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0DC516161AB41A9300441A4C /* nwHacks.app */,
-				0DC5162B1AB41A9300441A4C /* nwHacksTests.xctest */,
+				0DC516161AB41A9300441A4C /* FlashMeet.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0DC516181AB41A9300441A4C /* nwHacks */ = {
+		0DC516181AB41A9300441A4C /* FlashMeet */ = {
 			isa = PBXGroup;
 			children = (
 				0DC5161B1AB41A9300441A4C /* AppDelegate.swift */,
@@ -205,7 +185,7 @@
 				0DC516241AB41A9300441A4C /* LaunchScreen.xib */,
 				0DC516191AB41A9300441A4C /* Supporting Files */,
 			);
-			path = nwHacks;
+			path = FlashMeet;
 			sourceTree = "<group>";
 		};
 		0DC516191AB41A9300441A4C /* Supporting Files */ = {
@@ -215,23 +195,6 @@
 				0DB360521AB4626D001BD5B6 /* nwHacks-Bridging-Header.h */,
 				A54082241AB4BDCE0037864C /* Fonts */,
 				0DC5161A1AB41A9300441A4C /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0DC5162E1AB41A9300441A4C /* nwHacksTests */ = {
-			isa = PBXGroup;
-			children = (
-				0DC516311AB41A9300441A4C /* nwHacksTests.swift */,
-				0DC5162F1AB41A9300441A4C /* Supporting Files */,
-			);
-			path = nwHacksTests;
-			sourceTree = "<group>";
-		};
-		0DC5162F1AB41A9300441A4C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0DC516301AB41A9300441A4C /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -320,14 +283,14 @@
 			path = Annotation;
 			sourceTree = "<group>";
 		};
-		A5C629521AB5CBC10044BD85 /* Products */ = {
+		A5EB981D1AB5CFFD007FAF06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5C6295A1AB5CBC10044BD85 /* libPods.a */,
-				A5C6295C1AB5CBC10044BD85 /* libPods-Bolts.a */,
-				A5C6295E1AB5CBC10044BD85 /* libPods-Facebook-iOS-SDK.a */,
-				A5C629601AB5CBC10044BD85 /* libPods-SVPulsingAnnotationView.a */,
-				A5C629621AB5CBC10044BD85 /* libPods-UAProgressView.a */,
+				A5EB982A1AB5CFFD007FAF06 /* libPods.a */,
+				A5EB982C1AB5CFFD007FAF06 /* libPods-Bolts.a */,
+				A5EB982E1AB5CFFD007FAF06 /* libPods-Facebook-iOS-SDK.a */,
+				A5EB98301AB5CFFD007FAF06 /* libPods-SVPulsingAnnotationView.a */,
+				A5EB98321AB5CFFD007FAF06 /* libPods-UAProgressView.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,7 +298,7 @@
 		FBB8C03001A9EADABBE0D620 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A5C629511AB5CBC10044BD85 /* Pods.xcodeproj */,
+				A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */,
 				DB246E10059AF97EA7F995A2 /* Pods.debug.xcconfig */,
 				B7FFA34F1A5954D94932B065 /* Pods.release.xcconfig */,
 			);
@@ -345,9 +308,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0DC516151AB41A9300441A4C /* nwHacks */ = {
+		0DC516151AB41A9300441A4C /* FlashMeet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0DC516351AB41A9300441A4C /* Build configuration list for PBXNativeTarget "nwHacks" */;
+			buildConfigurationList = 0DC516351AB41A9300441A4C /* Build configuration list for PBXNativeTarget "FlashMeet" */;
 			buildPhases = (
 				D21A55116AAD462DB54F924B /* Check Pods Manifest.lock */,
 				0DC516121AB41A9300441A4C /* Sources */,
@@ -359,28 +322,10 @@
 			);
 			dependencies = (
 			);
-			name = nwHacks;
+			name = FlashMeet;
 			productName = MapKitTest;
-			productReference = 0DC516161AB41A9300441A4C /* nwHacks.app */;
+			productReference = 0DC516161AB41A9300441A4C /* FlashMeet.app */;
 			productType = "com.apple.product-type.application";
-		};
-		0DC5162A1AB41A9300441A4C /* nwHacksTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0DC516381AB41A9300441A4C /* Build configuration list for PBXNativeTarget "nwHacksTests" */;
-			buildPhases = (
-				0DC516271AB41A9300441A4C /* Sources */,
-				0DC516281AB41A9300441A4C /* Frameworks */,
-				0DC516291AB41A9300441A4C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0DC5162D1AB41A9300441A4C /* PBXTargetDependency */,
-			);
-			name = nwHacksTests;
-			productName = MapKitTestTests;
-			productReference = 0DC5162B1AB41A9300441A4C /* nwHacksTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -395,14 +340,9 @@
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 7NE79LP6VD;
 					};
-					0DC5162A1AB41A9300441A4C = {
-						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 7NE79LP6VD;
-						TestTargetID = 0DC516151AB41A9300441A4C;
-					};
 				};
 			};
-			buildConfigurationList = 0DC516111AB41A9300441A4C /* Build configuration list for PBXProject "nwHacks" */;
+			buildConfigurationList = 0DC516111AB41A9300441A4C /* Build configuration list for PBXProject "FlashMeet" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -415,52 +355,51 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A5C629521AB5CBC10044BD85 /* Products */;
-					ProjectRef = A5C629511AB5CBC10044BD85 /* Pods.xcodeproj */;
+					ProductGroup = A5EB981D1AB5CFFD007FAF06 /* Products */;
+					ProjectRef = A5EB981C1AB5CFFD007FAF06 /* Pods.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				0DC516151AB41A9300441A4C /* nwHacks */,
-				0DC5162A1AB41A9300441A4C /* nwHacksTests */,
+				0DC516151AB41A9300441A4C /* FlashMeet */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A5C6295A1AB5CBC10044BD85 /* libPods.a */ = {
+		A5EB982A1AB5CFFD007FAF06 /* libPods.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libPods.a;
-			remoteRef = A5C629591AB5CBC10044BD85 /* PBXContainerItemProxy */;
+			remoteRef = A5EB98291AB5CFFD007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A5C6295C1AB5CBC10044BD85 /* libPods-Bolts.a */ = {
+		A5EB982C1AB5CFFD007FAF06 /* libPods-Bolts.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-Bolts.a";
-			remoteRef = A5C6295B1AB5CBC10044BD85 /* PBXContainerItemProxy */;
+			remoteRef = A5EB982B1AB5CFFD007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A5C6295E1AB5CBC10044BD85 /* libPods-Facebook-iOS-SDK.a */ = {
+		A5EB982E1AB5CFFD007FAF06 /* libPods-Facebook-iOS-SDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-Facebook-iOS-SDK.a";
-			remoteRef = A5C6295D1AB5CBC10044BD85 /* PBXContainerItemProxy */;
+			remoteRef = A5EB982D1AB5CFFD007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A5C629601AB5CBC10044BD85 /* libPods-SVPulsingAnnotationView.a */ = {
+		A5EB98301AB5CFFD007FAF06 /* libPods-SVPulsingAnnotationView.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-SVPulsingAnnotationView.a";
-			remoteRef = A5C6295F1AB5CBC10044BD85 /* PBXContainerItemProxy */;
+			remoteRef = A5EB982F1AB5CFFD007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A5C629621AB5CBC10044BD85 /* libPods-UAProgressView.a */ = {
+		A5EB98321AB5CFFD007FAF06 /* libPods-UAProgressView.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPods-UAProgressView.a";
-			remoteRef = A5C629611AB5CBC10044BD85 /* PBXContainerItemProxy */;
+			remoteRef = A5EB98311AB5CFFD007FAF06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -481,13 +420,6 @@
 				A54082331AB4BDCE0037864C /* SanFranciscoDisplay-Thin.otf in Resources */,
 				A54082301AB4BDCE0037864C /* SanFranciscoDisplay-Medium.otf in Resources */,
 				A540822F1AB4BDCE0037864C /* SanFranciscoDisplay-Light.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DC516291AB41A9300441A4C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,23 +487,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0DC516271AB41A9300441A4C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0DC516321AB41A9300441A4C /* nwHacksTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0DC5162D1AB41A9300441A4C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0DC516151AB41A9300441A4C /* nwHacks */;
-			targetProxy = 0DC5162C1AB41A9300441A4C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0DC5161F1AB41A9300441A4C /* Main.storyboard */ = {
@@ -682,10 +598,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "nwHacks/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "FlashMeet/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = nwHacks;
-				SWIFT_OBJC_BRIDGING_HEADER = "nwHacks/Supporting Files/nwHacks-Bridging-Header.h";
+				PRODUCT_NAME = FlashMeet;
+				SWIFT_OBJC_BRIDGING_HEADER = "FlashMeet/Supporting Files/nwHacks-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -695,51 +611,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "nwHacks/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "FlashMeet/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = nwHacks;
-				SWIFT_OBJC_BRIDGING_HEADER = "nwHacks/Supporting Files/nwHacks-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		0DC516391AB41A9300441A4C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "nwHacksTests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = nwHacksTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nwHacks.app/nwHacks";
-			};
-			name = Debug;
-		};
-		0DC5163A1AB41A9300441A4C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "nwHacksTests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = nwHacksTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nwHacks.app/nwHacks";
+				PRODUCT_NAME = FlashMeet;
+				SWIFT_OBJC_BRIDGING_HEADER = "FlashMeet/Supporting Files/nwHacks-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0DC516111AB41A9300441A4C /* Build configuration list for PBXProject "nwHacks" */ = {
+		0DC516111AB41A9300441A4C /* Build configuration list for PBXProject "FlashMeet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0DC516331AB41A9300441A4C /* Debug */,
@@ -748,20 +630,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0DC516351AB41A9300441A4C /* Build configuration list for PBXNativeTarget "nwHacks" */ = {
+		0DC516351AB41A9300441A4C /* Build configuration list for PBXNativeTarget "FlashMeet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0DC516361AB41A9300441A4C /* Debug */,
 				0DC516371AB41A9300441A4C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0DC516381AB41A9300441A4C /* Build configuration list for PBXNativeTarget "nwHacksTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0DC516391AB41A9300441A4C /* Debug */,
-				0DC5163A1AB41A9300441A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
