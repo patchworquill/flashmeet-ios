@@ -28,6 +28,13 @@ struct RacerLocation {
     var location: CLLocationCoordinate2D
 }
 
+struct DestinationLocation {
+    var name: String
+    var adress: String
+    var description: String
+    var location: CLLocationCoordinate2D
+}
+
 struct RacerPath {
     var currentLocation: RacerLocation
     var locationHistory: [CLLocationCoordinate2D]
@@ -88,10 +95,22 @@ class DataController {
             "lat": location.latitude,
             "long": location.longitude
         ]
-        
         usersRef.childByAppendingPath(user!.userID).setValue(locationDict)
-        
+        println("i")
     }
+    
+    func raceListener(raceID: String) {
+        var thisRaceRef = Firebase(url:"https://nwhacks.firebaseio.com/races/\(raceID)")
+        
+        thisRaceRef.observeEventType(.ChildChanged, withBlock: { snapshot in
+            println(snapshot.value)
+        })
+    }
+    
+    func pullDestination() {
+        //TODO: get destination and display in MapKit
+    }
+
 
     func fetchRacers(completion: ([RacerLocation]) -> ()) {
         // TODO
